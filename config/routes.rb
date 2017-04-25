@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/" => "admins#index"
+  
   get "/admins" => "admins#index"
+  get "/admins/:id" => "admins#show"
+
   get "/clients" => "clients#index"
+  get "/clients/:id" => "clients#show"
+
   get "/drivers" => "drivers#index"
+  get "/drivers/:id" => "drivers#show"
+
+  get "/pods" => "pods#index"
+  get "pods/new" => "pods#new"
+  post "/pods" => "pods#create"
+  get "/pods/:id/" => "pods#show"
+  
   # get "/admins/new" => "admins#new"
   # post "/admins" => "admins#create"
 
@@ -16,7 +28,7 @@ Rails.application.routes.draw do
   # post "/admins/login" => "admins_sessions#create"
   # get "/admins/logout" => "admins_sessions#destroy"
 
-  # get "/" => "pods#index"
+  
   
   
 

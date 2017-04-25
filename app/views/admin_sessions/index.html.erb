@@ -1,0 +1,10 @@
+<h1>Admins</h1>
+<% @admins.each do |admin| %>
+<div class="col-md-4">
+    <div class="well">
+    <h3><b>Name:</b> <%= admin.name %></h3>
+   <h3><b>Email:</b> <%= admin.email %></h3>
+</div>
+</div>
+<% end %>
+</div>

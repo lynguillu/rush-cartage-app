@@ -1,0 +1,21 @@
+<h1>Proof of Delivery</h1>
+
+<div class="row">
+
+<% @pods.each do | pod | %>
+  <div class="col-md-4">
+    <div class="well">
+      <h3><a href="/pods/<%= pod.id %>">
+
+      <h3>Driver Name: <%= pod.driver_id %></a></h3>
+      <h3>Client Name: <%= pod.client_id %></h3>
+      <h3>Pick Address: <%= pod.pickup_address %></h3>
+      <h3>Scheduled Pickup: <%= pod.scheduled_pickup%></h3>
+      <h3>Actual Pickup: <%= pod.actual_pickup %></h3>
+      <h3>Drop Off Address: <%= pod.dropoff_address %></h3>
+      <h3>Scheduled Dropoff: <%= pod.scheduled_dropoff %></h3>
+      <h3>Actual Drop Off: <%= pod.actual_dropoff %></h3>
+      </div>
+  </div>
+<% end %>
+</div>
