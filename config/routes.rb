@@ -14,22 +14,26 @@ Rails.application.routes.draw do
   get "pods/new" => "pods#new"
   post "/pods" => "pods#create"
   get "/pods/:id/" => "pods#show"
-  
-  # get "/admins/new" => "admins#new"
-  # post "/admins" => "admins#create"
 
-  # get "/clients/new" => "clients#new"
-  # post "/clients" => "clients#create"
+  get "/clients_signup" => "clients#new"
+  post "/clients" => "clients#create"
 
-  # get "/drivers/new" => "drivers#new"
-  # post "/drivers" => "drivers#create"
+  get "/drivers_signup" => "drivers#new"
+  post "/drivers" => "drivers#create"
 
-  # get "/admins/login" => "admins_sessions#new"
-  # post "/admins/login" => "admins_sessions#create"
-  # get "/admins/logout" => "admins_sessions#destroy"
+  get "/admins_signup" => "admins#new"
+  post "/admins" => "admins#create"
 
+  get "/admins_login" => "admin_sessions#new"
+  post "/admins_login" => "admin_sessions#create"
+  get "/admins_logout" => "admin_sessions#destroy"
+
+  get "/drivers_login" => "driver_sessions#new"
+  post "/drivers_login" => "driver_sessions#create"
+  get "/drivers_logout" => "driver_sessions#destroy"
   
-  
-  
+  get "/clients_login" => "client_sessions#new"
+  post "/clients_login" => "client_sessions#create"
+  get "/clients_logout" => "client_sessions#destroy"
 
 end

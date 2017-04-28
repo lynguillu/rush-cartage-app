@@ -1,0 +1,2 @@
+class AddNamesToTable < ApplicationRecord
+end
