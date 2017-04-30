@@ -21,7 +21,7 @@ class AdminsController < ApplicationController
       redirect_to '/'
     else
       flash[:warning] = 'Invalid email or password!'
-      redirect_to '/admin_signup'
+      redirect_to '/admins_signup'
     end
   end
 

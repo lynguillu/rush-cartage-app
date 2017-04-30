@@ -1,0 +1,16 @@
+/*
+Theme: Tribus - Multipurpose Template
+Website URI: http://preview.webpixels.ro/tribus-v1.0.1/
+Author: Webpixels
+Author URI: http://www.webpixels.ro
+*/
+
+// SASS variables
+@import "variables/_variables.scss";
+@import "variables/_custom.scss";
+
+// Header
+@import "header/header.scss";
+
+// Base styles
+@import "core/_base.scss";

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "/" => "admins#index"
+
+  get "/" => "pages#home"
   
   get "/admins" => "admins#index"
   get "/admins/:id" => "admins#show"

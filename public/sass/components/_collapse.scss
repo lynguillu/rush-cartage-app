@@ -1,0 +1,161 @@
+/* COLLAPSE */
+.panel {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.panel-group {
+    margin-bottom: 30px;
+}
+/* COLLAPSE STACKED */
+.panel-group.panel-stacked .panel {
+    border-radius: 0;
+}
+.panel-group.panel-stacked .panel:first-child {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+}
+.panel-group.panel-stacked .panel:last-child {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+.panel-group.panel-stacked .panel+.panel {
+    margin-top: 0;
+    border-top: 0;
+}
+/* COLLAPSE SPACED */
+.panel-group.panel-spaced .panel {
+    border-radius: $border-radius;
+}
+.panel-group.panel-spaced .panel+.panel {
+    margin-top: 15px;
+    border-top: 1px solid $collapse-border-color;
+}
+/* STYLE 2 & STYLE 3 */
+.panel-group--style-1 .panel,
+.panel-group--style-2 .panel {
+    border: 0;
+    background: transparent;
+}
+.panel-group--style-1 .panel-body,
+.panel-group--style-2 .panel-body {
+    border: 0;
+}
+.panel-group--style-1 .panel-heading,
+.panel-group--style-2 .panel-heading {
+    color: #333;
+    border: none;
+    padding: 0 !important;
+}
+.panel-group--style-1 .panel-title,
+.panel-group--style-2 .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+    background: #fff;
+}
+.panel-group--style-2 .panel-title {
+    background: #000;
+}
+.panel-group--style-1 .panel-title a,
+.panel-group--style-2 .panel-title a {
+    padding: 18px 35px 18px 22px;
+    display: table;
+    width: 100%;
+    border: 1px solid #f1f1f1;
+    color: #000;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    position: relative;
+}
+.panel-group--style-2 .panel-title a {
+    border: none;
+    color: #fff;
+}
+.panel-group--style-1 .panel-title a span,
+.panel-group--style-2 .panel-title a span {
+    position: absolute;
+    top: 22px;
+    right: 17px;
+    color: #ccc;
+}
+/* STYLE 4 */
+.panel-group--style-3 .panel-default > .panel-heading,
+.panel-group--style-4 .panel-default > .panel-heading {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+.panel-group--style-4 .panel-default > .panel-heading {
+    border: 1px solid $collapse-border-color;
+    padding: 0 20px 0 0;
+}
+.panel-group--style-3.panel-group .panel,
+.panel-group--style-4.panel-group .panel {
+    margin-bottom: 1px;
+    border-radius: 0;
+    background-color: transparent;
+}
+.panel-group--style-3 .panel:first-child {
+    border-top: 1px solid $collapse-border-color;
+}
+.panel-group--style-3.panel-group .panel {
+    border-bottom: 1px solid $collapse-border-color;
+}
+.panel-group--style-3 .panel-title ,
+.panel-group--style-4 .panel-title {
+    overflow: hidden;
+}
+.panel-group--style-3 .panel-title a,
+.panel-group--style-4 .panel-title a {
+    padding: $spacer 0;
+    font-weight: 500;
+    font-size: $font-size-sm;
+    display: table;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.panel-group--style-4 .panel-title a {
+    padding-left: 70px;
+}
+.panel-group--style-4 .panel-title a > .collapse-heading-icon {
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 54px;
+    height: 100%;
+    text-align: center;
+    line-height: 54px;
+    border-right: 1px solid $collapse-border-color;
+}
+.panel-group--style-4 .panel-title a > .collapse-heading-icon > i {
+    font-size: 28px;
+    line-height: 54px;
+    color: $color-gray-light;
+
+}
+.panel-group--style-3 .panel-default ,
+.panel-group--style-4 .panel-default {
+    border: none;
+}
+.panel-group--style-3 .panel-default > .panel-heading + .panel-collapse > .panel-body,
+.panel-group--style-4 .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border: none;
+    padding: 20px 0;
+}
+.panel-group--style-3 .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    padding-left: 0;
+}
+.panel-group--style-3 .panel-default > .panel-heading > .panel-title > a[aria-expanded="true"] {
+    border-bottom: 1px solid $border-color-base;
+}
+.panel-group--style-4 .panel-default > .panel-heading > .panel-title > a[aria-expanded="true"] {
+    border-bottom: 0;
+}
+.panel-group--style-3 .panel-default > .panel-heading > .panel-title > a[aria-expanded="true"] ,
+.panel-group--style-4 .panel-default > .panel-heading > .panel-title > a[aria-expanded="true"] {
+    color: $color-base-1 !important;
+    text-decoration: none;
+}

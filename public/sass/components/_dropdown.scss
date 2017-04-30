@@ -1,0 +1,56 @@
+// Dropdown: Custom
+.dropdown-menu.dropdown-custom {
+    z-index: 1000;
+    min-width: 180px;
+    padding: 5px 0;
+    font-size: $font-size-sm;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    border-radius: $border-radius-sm;
+    @extend .z-depth-2;
+}
+.dropdown .dropdown-menu.dropdown-custom {
+    margin: 2px 0 0;
+}
+
+.dropdown.open .dropdown-menu.dropdown-custom {
+    opacity: 1;
+}
+// Dropown: Sizes
+.dropdown-menu.dropdown-menu-sm {
+    min-width: 100px;
+    border: $border-radius-xs;
+}
+
+.dropdown-menu.dropdown-menu-lg {
+    min-width: 260px;
+    border-radius: $border-radius;
+}
+
+.dropdown-menu > li > a {
+    padding: 0.5rem 1rem;
+}
+// Dropdown: Animated
+.dropdown-custom > a {
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.dropdown-custom.animated {
+    -webkit-animation-duration: 0.55s;
+    animation-duration: 0.55s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+.dropdown-custom.animated.fadeIn {
+    /*
+   * Example of further customisation for the "fadeIn" effect
+   * Can be used for all effects ie. .dropdown-menu.animated.EFFECTNAME
+   */
+    -webkit-animation-duration: 0.45s;
+    animation-duration: 0.45s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}

@@ -1,0 +1,144 @@
+// General styles
+body {
+	font-size: $font-size-base;
+	font-family: $font-family-base;
+	color: $color-gray;
+}
+p {
+	font-size: $paragraph-font-size;
+	line-height: $paragraph-line-height;
+}
+// Links
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+}
+a:hover,
+a:active {
+	color: $link-color-hover;
+	text-decoration: $link-decoration-hover;
+}
+a.link {
+	display: inline-block;
+	font-family: $font-family-alt;
+}
+a.link-lg {
+	font-size: $font-size-lg;
+}
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-alt;
+	line-height: 1.46;
+}
+.heading {
+	margin: 0 0 6px;
+	padding: 0;
+	text-transform: $heading-text-transform;
+	font-family: $font-family-alt;
+	font-weight: $heading-font-weight;
+	color: $heading-color;
+	line-height: 1.46;
+}
+.heading.heading-inverse {
+	color: $heading-inverse-color;
+}
+.heading > a {
+	color: $color-gray-dark;
+}
+.heading:hover > a {
+	color: $color-base-1!important;
+}
+.heading > .icon,
+.heading > a > .icon {
+	display: inline-block;
+	margin-right: 4px;
+}
+.heading-1 {
+	font-size: $font-size-h1!important;
+}
+.heading-2 {
+	font-size: $font-size-h2!important;
+}
+.heading-3 {
+	font-size: $font-size-h3!important;
+}
+.heading-4 {
+	font-size: $font-size-h4!important;
+}
+.heading-5 {
+	font-size: $font-size-h5!important;
+}
+.heading-6 {
+	font-size: $font-size-h6!important;
+}
+
+.heading-xs {
+	font-size: $font-size-xs!important;
+}
+.heading-sm {
+	font-size: $font-size-sm!important;
+}
+.heading-lg {
+	font-size: $font-size-lg!important;
+}
+.heading-xl {
+	font-size: $font-size-lg * 3!important;
+}
+// Fluid paragraph containers
+.fluid-paragraph {
+	font-size: $font-size-base;
+	width: 680px;
+	margin: auto;
+	padding: 0 20px;
+}
+.fluid-paragraph h1:not(.heading),
+.fluid-paragraph h2:not(.heading),
+.fluid-paragraph h3:not(.heading),
+.fluid-paragraph h4:not(.heading),
+.fluid-paragraph h5:not(.heading),
+.fluid-paragraph h6:not(.heading) {
+	text-transform: none!important;
+}
+.fluid-paragraph.fluid-paragraph-sm {
+	width: 580px;
+}
+.fluid-paragraph.fluid-paragraph-md {
+	width: 780px;
+}
+.fluid-paragraph.fluid-paragraph-lg {
+	width: 880px;
+}
+.fluid-paragraph.paragraph-sm,
+.fluid-paragraph.paragraph-sm > p {
+	font-size: $font-size-sm;
+}
+.fluid-paragraph.paragraph-lg,
+.fluid-paragraph.paragraph-lg > p {
+	font-size: $font-size-lg;
+}
+@media (max-width: 767px) {
+	.fluid-paragraph {
+		width: 100% !important;
+	}
+}
+
+// Quote symbols
+.quote-block-lg {
+	line-height: 2.4rem;
+}
+.quote-icon-lg {
+	font-size: 2rem;
+	font-weight: 600;
+	display: inline-block;
+	margin: 0 5px;
+}
+// Other
+small,
+.small {
+	font-size: 70%;
+}

@@ -1,0 +1,382 @@
+// Icon list
+
+ul.icons {
+    margin: 0;
+    padding: 0;
+}
+
+ul.icons li {
+    list-style: none;
+    margin: 5px 0 0;
+    vertical-align: top;
+    font-size: $font-size-sm;
+}
+
+ul.icons li > a:not(.icon) {
+    color: $color-gray-light;
+}
+ul.icons li > a:hover {
+    color: $color-base-1;
+}
+ul.icons li .icon {
+    margin-right: 12px;
+    position: relative;
+}
+// Inline links
+ul.inline-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.inline-links > li {
+    display: inline-block;
+    padding: 0 17px 0 8px;
+    position: relative;
+    font-size: $font-size-sm;
+}
+
+ul.inline-links > li:first-child {
+    padding-left: 0;
+}
+
+ul.inline-links > li:last-child {
+    padding-right: 0;
+}
+
+ul.inline-links > li,
+ul.inline-links > li > a {
+    color: $color-gray-light;
+}
+
+ul.inline-links > li > a.active {
+    color: $color-gray-dark;
+    font-weight: 500;
+}
+
+ul.inline-links > li > a:hover {
+    color: $color-base-1;
+}
+
+ul.inline-links > li > a > i,
+ul.inline-links > li > i {
+    margin-right: 4px;
+}
+
+ul.inline-links.inline-links--style-2 > li,
+ul.inline-links.inline-links--style-2 > li > a {
+    font-size: 13px;
+}
+
+ul.inline-links.inline-links--style-2 > li:before {
+    position: absolute;
+    right: 0;
+    content: "/";
+    color: $color-gray-light;
+}
+
+ul.inline-links.inline-links--style-2 > li:last-child:before {
+    content: "";
+}
+// Categories list
+ul.categories {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.categories > li {
+    border-bottom: 1px solid $border-color-base;
+}
+
+ul.categories > li:last-child {
+    border: 0;
+}
+
+ul.categories > li > a {
+    display: block;
+    padding: 12px 0;
+    color: $color-gray-light;
+    font-size: $font-size-sm;
+    font-family: $font-family-alt;
+}
+
+ul.categories > li > a:after,
+ul.categories > li > a:before {
+    content: "";
+    display: table;
+}
+
+ul.categories > li > a:after {
+    clear: both;
+}
+
+ul.categories > li:hover > a {
+    color: $color-base-1;
+}
+
+ul.categories--style-1 > li > a {
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+ul.categories--style-1 > li > a > .category-name {
+    color: $color-gray-dark;
+    flex-grow: 1;
+}
+
+ul.categories--style-1 > li > a:hover > .category-name {
+    color: $color-base-1;
+}
+
+ul.categories--style-1 > li > a > .category-count {
+    color: $color-gray-light;
+    font-size: $font-size-xs;
+}
+
+ul.categories--style-1 > li > a:before {
+    content: "\f125";
+    font-family: "Ionicons";
+    position: absolute;
+    height: 16px;
+    line-height: 16px;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    font-size: 10px;
+    color: $color-gray-light;
+}
+// Meta info list
+ul.meta-info-cells {
+    margin: 0;
+    padding: 0;
+}
+
+ul.meta-info-cells-v2 li,
+ul.meta-info-cells-v3 li {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+ul.meta-info-cells-v2 li a,
+ul.meta-info-cells-v3 li a {
+    color: $color-gray-light;
+}
+
+ul.meta-info-cells-v2 li {
+    padding: 0;
+    color: $color-gray-dark;
+    font-size: 13px;
+}
+
+ul.meta-info-cells-v2 li i {
+    color: $color-gray-dark;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+ul.meta-info-cells-v3 li i {
+    width: 31px;
+    height: 31px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 31px;
+    background: transparent;
+    border: 1px solid $border-color-base;
+    color: $color-gray-dark;
+    font-size: 13px;
+    border-radius: 100%;
+}
+
+ul.meta-info-cells-v3 li:hover i {
+    background: $color-base-1;
+    color: $color-base-text-1;
+    border-color: $color-base-1;
+}
+
+ul.meta-info-cells-v3 li:first-child {
+    padding-left: 0;
+}
+
+ul.meta-info-cells-v3 li:last-child {
+    border: 0;
+    padding-right: 0;
+}
+
+ul.meta-info-cells-v3 li .btn-link {
+    color: $color-base-1;
+    font-weight: 600;
+    font-size: $font-size-sm;
+}
+
+ul.meta-info-cells-v4 > li,
+ul.meta-info-cells-v5 > li {
+    display: inline-block;
+    margin-right: 18px;
+    font-size: $font-size-sm;
+    color: $color-gray-light;
+    font-weight: 500;
+    font-family: $font-family-alt;
+}
+
+ul.meta-info-cells-v5 > li {
+    margin: 0;
+}
+
+ul.meta-info-cells-v5 > li > span {
+    display: block;
+    padding-right: 10px;
+    margin-right: 7px;
+    border-right: 1px solid $border-color-base;
+}
+
+ul.meta-info-cells-v5 > li:last-child > span {
+    border: 0;
+}
+
+ul.meta-info-cells-v4 > li > a > i,
+ul.meta-info-cells-v5 > li > a > i {
+    margin-right: 5px;
+    color: $color-gray-light;
+}
+
+ul.meta-info-cells-v4 > li > a,
+ul.meta-info-cells-v5 > li > a {
+    color: $color-gray-light;
+}
+
+ul.meta-info-cells-v4 > li > a:hover,
+ul.meta-info-cells-v4 > li > a:hover > i,
+ul.meta-info-cells-v5 > li > a:hover,
+ul.meta-info-cells-v5 > li > a:hover > i {
+    color: $color-base-1;
+}
+
+ul.meta-info-cells-v4 > li:first-child,
+ul.meta-info-cells-v5 > li:first-child {
+    padding-left: 0;
+}
+
+ul.meta-info-cells-v4 > li:last-child,
+ul.meta-info-cells-v5 > li:last-child {
+    border: 0;
+    padding-right: 0;
+}
+
+ul.meta-info-cells-v4 li .btn-link {
+    color: $color-base-1;
+    font-weight: 600;
+    font-size: $font-size-sm;
+}
+@media (max-width: 771px) {
+    ul.meta-info-cells-v4 li,
+    ul.meta-info-cells-v5 li {
+        margin-bottom: 5px;
+    }
+}
+// Unstyles list for when included in a .sidebar
+.sidebar .list-unstyled {
+    font-size: $font-size-sm;
+}
+
+.sidebar .list-unstyled > li > a {
+    color: $color-gray-dark;
+    padding: 0.2rem 0;
+    display: block;
+}
+
+.sidebar .list-unstyled > li:hover > a {
+    color: $color-base-1;
+}
+// PSEUDO LIST - VERTICAL INFO
+.vertical-info {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+.vertical-info > li {
+    padding: 0.25rem 0;
+}
+
+.vertical-info > li > span {
+    display: inline-block;
+    font-size: $font-size-sm;
+}
+
+.vertical-info > li > .vi-title {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.vertical-info > li > .vi-content {
+    color: $color-gray-light;
+}
+// Bullet list
+ul.list-bullet {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+ul.list-bullet li {
+    clear: left;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+}
+
+ul.list-bullet li > figure {
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: $font-size-base;
+    color: $color-gray-lighter;
+    font-weight: 600;
+    display: inline-block;
+    float: left;
+}
+
+ul.list-bullet li img {
+    width: 60px;
+}
+
+ul.list-bullet li h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+ul.list-bullet li p {
+    margin: 0 0 0 50px;
+    padding: 0;
+}
+
+ul.list-bullet li span {
+    margin-left: 6px;
+}
+
+ul.list-bullet li a {
+    font-weight: 500;
+}
+
+ul.list-bullet li a:hover {
+    text-decoration: none;
+    color: #464646;
+}
+
+ul.list-bullet li span {
+    font-size: 12px;
+}

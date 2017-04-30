@@ -1,0 +1,122 @@
+.pagination-wrapper {
+    margin: $spacer 0;
+    font-size: 0;
+}
+// Pagination: DEFAULT
+.pagination {
+    margin: 0;
+    border-radius: 0;
+}
+.pagination > li > a,
+.pagination > li > span {
+    padding: 8px 14px;
+    margin: 0 3px;
+    font-family: $font-family-alt;
+    font-size: $pagination-font-size;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: 1px solid $pagination-border-color;
+    border-radius: $border-radius-xs;
+    text-align: center!important;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: $pagination-border-radius;
+    border-bottom-left-radius: $pagination-border-radius;
+}
+
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    border-top-right-radius: $pagination-border-radius;
+    border-bottom-right-radius: $pagination-border-radius;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    color: $pagination-color-hover;
+    background-color: $pagination-bg-hover;
+    border-color: $pagination-border-color-hover;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    color: $pagination-color-active;
+    background-color: $pagination-bg-active;
+    border-color: $pagination-border-color-active;
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > span:hover {
+    color: $pagination-color-disabled;
+    background-color: $pagination-bg-disabled;
+    border-color: $pagination-border-color-disabled;
+}
+
+// Sizes
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+    padding: 12px 18px;
+    margin: 0 3px;
+    font-family: $font-family-alt;
+    font-size: $pagination-font-size;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: 1px solid $pagination-border-color;
+}
+// Styles
+.pagination--style-2 > li > a,
+.pagination--style-2 > li > span  {
+    background: $card-bg;
+    color: $color-gray-light;
+}
+// Shapes
+.pagination-circle > li > a,
+.pagination-circle > li > span {
+    border-radius: 50% !important;
+    margin: 0 5px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    line-height: 2.2;
+}
+.pagination-square > li > a,
+.pagination-square > li > span {
+    border-radius: 0 !important;
+    margin: 0 5px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    line-height: 2.2;
+}
+// Pager
+.pager li > a,
+.pager li > span {
+    background-color: $pagination-bg;
+    border: 1px solid $pagination-border-color;
+    border-radius: $pagination-border-radius;
+}
+
+.pager li > a:focus,
+.pager li > a:hover {
+    background-color: $pagination-bg-hover;
+    color: $pagination-color-hover;
+}
+
+// Pager: STYLE 1
+.pager--style-1 li.pager-count span {
+    background: transparent;
+    font-style: italic;
+}

@@ -1,14 +1,1432 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>RushCartageApp</title>
     <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Page loader -->
+    <script src="assets/pace/js/pace.min.js"></script>
+    <link rel="stylesheet" href="assets/pace/css/pace-minimal.css" type="text/css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
+
+
+    <!-- CSS animation library -->
+    <link rel="stylesheet" href="assets/animate/animate.min.css" type="text/css">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="assets/bootstrap-select/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/swiper/css/swiper.min.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css" type="text/css">
+    <link rel="stylesheet" href="fonts/line-icons/line-icons.css" type="text/css">
+    <link rel="stylesheet" href="fonts/line-icons-pro/line-icons-pro.css" type="text/css">
+
+    <!-- Global style (main) -->
+    <link id="stylesheet" type="text/css" href="css/global-style.min.css" rel="stylesheet" media="screen">
+    <!-- Custom style - Remove if not necessary -->
+    <link type="text/css" href="css/custom-style.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/png">
+
+
+    <!-- RS5.0 -->
+    <link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
+
+    <!-- Cube Portfolio -->
+    <link rel="stylesheet" href="assets/cubeportfolio/css/cubeportfolio.min.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+<!-- MAIN WRAPPER -->
+<div class="body-wrap">
+    <div id="st-container" class="st-container">
+
+        <nav class="st-menu st-effect-1" id="menu-1">
+    <div class="st-profile">
+        <div class="st-profile-user-wrapper">
+            <div class="profile-user-image">
+                <img src="images/prv/people/person-1.jpg" class="img-circle" />
+            </div>
+            <div class="profile-user-info">
+                <span class="profile-user-name">Bertram Frank Ozzie</span>
+                <span class="profile-user-email">username@example.com</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="st-menu-list mt-2">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-bookmarks-outline"></i> Theme documentation
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-cart-outline"></i> Purchase Tribus
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Account</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-person-outline"></i> User profile
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-location-outline"></i> My addresses
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-card"></i> My cards
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-unlocked-outline"></i> Password update
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Support center</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-information-outline"></i> About Tribus
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-email-outline"></i> Contact &amp; support
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-camera"></i> Getting started
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+        <div class="st-pusher">
+            <div class="st-content">
+                <div class="st-content-inner">
+                    <!-- HEADER -->
+                    <div class="header-1 " data-offset-top="84" data-nav-animation="fadeInDown" id="header">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-main navbar--shadow navbar-dropdown--arrow navbar--caps navbar--strong" role="navigation">
+    <div class="container relative">
+        <div class="navbar-header">
+        <!-- NAVBAR TOGGLE -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+
+        <!-- LOGO -->
+        <a class="navbar-logo" href="index.html">
+          <!-- Logo: Dark layout -->
+          <img src="images/logo/logo-1-a.png" class="hide" />
+
+          <!-- Logo: Light layout -->
+          <img src="images/logo/logo-1-b.png" />
+            </a>
+
+                  <!-- SLIDEBAR TOGGLE -->
+          <button type="button" class="navbar-icon-btn btn-st-trigger" data-effect="st-effect-1">
+          <i class="fa fa-bars"></i>
+          </button>
+        
+        <!-- NAVBAR SEARCH - for mobile resolutions -->
+            <button type="button" class="navbar-icon-btn css-animate" data-target="#sctGlobalSearch">
+          <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+        <div id="navbar-collapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn zoomIn zoomIn zoomIn">
+              <!-- Search button -->
+                    <li id="btnGlobalSearch" class="css-animate dropdown-icon hidden-xs hidden-sm" data-target="#sctGlobalSearch">
+                      <a href="#" data-toggle="dropdown">
+                        <span>
+                          <i class="fa fa-search"></i>
+                        </span>
+                      </a>
+          </li>
+
+          <!-- Navbar items/links -->
+                     <!-- Navbar links -->
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       <span>Home</span>
+    <!-- 
+    <ul class="dropdown-menu">
+        <li class="">
+            <a tabindex="-1" href="index.html">
+                Main page
+            </a>
+        </li>
+        <li class="">
+            <a tabindex="-1" href="overview.html">
+                Overview
+            </a>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Business &amp; Corporate</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-business-1.html">
+                        Homepage 1
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-business-2.html">
+                        Homepage 2
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-business-3.html">
+                        Homepage 3
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-business-4.html">
+                        Homepage 4
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-business-5.html">
+                        Homepage 5
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-business-6.html">
+                        Homepage 6
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-business-7.html">
+                        Homepage 7
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Creative</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-creative-1.html">
+                        Homepage 1
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-creative-2.html">
+                        Homepage 2
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-creative-3.html">
+                        Homepage 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Real Estate</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-real-estate-1.html">
+                        Business
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-real-estate-2.html">
+                        Property listing: Style 1
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-real-estate-3.html">
+                        Property listing: Style 2
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Jobs</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-jobs-1.html">
+                        Hero search
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-jobs-2.html">
+                        Static search
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-jobs-3.html">
+                        Jobs listing: List view
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-jobs-4.html">
+                        Jobs listing: Grid view
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a tabindex="-1" href="homepage-architecture-1.html">
+                Architecture
+            </a>
+        </li>
+        <li>
+            <a tabindex="-1" href="homepage-education-1.html">
+                Education
+            </a>
+        </li>
+        <li>
+            <a tabindex="-1" href="homepage-medical-1.html">
+                Medical
+            </a>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Grid shop</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-shop-grid-1.html">
+                        Homepage: Slider
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-shop-grid-2.html">
+                        Homepage: Sidebar + Slider
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Minimalist shop</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-shop-minimalist-1.html">
+                        Homepage: Mosaic
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-shop-minimalist-2.html">
+                        Homepage: Slider
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Cards shop</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-shop-cards-1.html">
+                        Homepage: Slider
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-shop-cards-2.html">
+                        Homepage: Sidebar + Slider
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul> --></a>
+</li>
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       <span>About</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Helpful layouts</a>
+            <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="support-center-1.html">Support center: Style 1</a></li>
+                <li><a tabindex="-1" href="support-center-2.html">Support center: Style 2</a></li>
+                <li><a tabindex="-1" href="faq-1.html">FAQ: Style 1</a></li>
+                <li><a tabindex="-1" href="faq-2.html">FAQ: Style 2</a></li>
+                <li><a tabindex="-1" href="error-404-1.html">Error 404</a></li>
+                <li><a tabindex="-1" href="maintenance-mode-1.html">Maintenance mode</a></li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">My profile</a>
+            <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="profile-user-about.html">User profile</a></li>
+                <li><a tabindex="-1" href="profile-user-connections.html">User connections</a></li>
+                <li><a tabindex="-1" href="profile-user-cards.html">Attached cards</a></li>
+                <li><a tabindex="-1" href="profile-order-history.html">Order history</a></li>
+                <li><a tabindex="-1" href="profile-resume.html">Resume</a></li>
+                <li><a tabindex="-1" href="profile-settings.html">Settings: All options (tabbed)</a></li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">About</a>
+            <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="about-agency.html">About us: Agency</a></li>
+                <li><a tabindex="-1" href="about-business.html">About us: Business</a></li>
+                <li><a tabindex="-1" href="about-creative.html">About us: Creative</a></li>
+                <li><a tabindex="-1" href="about-extended.html">About us: Extended</a></li>
+                <li><a tabindex="-1" href="about-shops.html">About us: Shops</a></li>
+                <li><a tabindex="-1" href="about-wide-simple.html">About us: Wide &amp; Simple</a></li>
+                <li><a tabindex="-1" href="about-me-1.html">About me: Basic</a></li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Our team</a>
+            <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="team-agency.html">Team: Agency</a></li>
+                <li><a tabindex="-1" href="team-agency-cards.html">Team: Agency (cards)</a></li>
+                <li><a tabindex="-1" href="team-business.html">Team: Business</a></li>
+                <li><a tabindex="-1" href="team-creative.html">Team: Creative</a></li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Services</a>
+            <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="services-agency.html">Services: Agency</a></li>
+                <li><a tabindex="-1" href="services-business.html">Services: Business</a></li>
+                <li><a tabindex="-1" href="services-creative.html">Services: Creative</a></li>
+                <li><a tabindex="-1" href="services-extended.html">Services: Extended</a></li>
+                <li><a tabindex="-1" href="services-process.html">Services: Process</a></li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Contact</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="contact-card.html">
+                        Contact: Card
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="contact-classic.html">
+                        Contact: Classic
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="contact-modern.html">
+                        Contact: Modern
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="contact-simple.html">
+                        Contact: Simple
+                    </a>
+                </li>
+            </ul>
+        </li>
+                <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Search</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="search-page-1.html">
+                        Search: Fullscreen
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="search-page-2.html">
+                        Search: Fullscreen + background
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="search-page-3.html">
+                        Search: Fullscreen + results
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Sign in - Sign up</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">
+                    <span class="text-uppercase">Modern</span>
+                </li>
+                <li><a tabindex="-1" href="sign-in-1.html">Sign in: Modern</a></li>
+                <li><a tabindex="-1" href="sign-up-1.html">Sign up: Modern</a></li>
+                <li><a tabindex="-1" href="recover-1.html">Recover: Modern</a></li>
+                <li class="dropdown-header">
+                    <span class="text-uppercase">Classic</span>
+                </li>
+                <li><a tabindex="-1" href="sign-in-2.html">Sign in: Classic</a></li>
+                <li><a tabindex="-1" href="sign-up-2.html">Sign up: Classic</a></li>
+                <li><a tabindex="-1" href="recover-2.html">Recover: Classic</a></li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Submenu child 1</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown dropdown-submenu">
+                  <a tabindex="-1" href="#">Submenu child 2</a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">Submenu child 3</a></li>
+                    <li><a tabindex="-1" href="#">Submenu child 3</a></li>
+                    <li><a tabindex="-1" href="#">Submenu child 3</a></li>
+                  </ul>
+                </li>
+                <li><a tabindex="-1" href="#">Submenu child 2</a></li>
+                <li><a tabindex="-1" href="#">Submenu child 2</a></li>
+            </ul>
+        </li>
+    </ul>
+</li>
+<li class="dropdown mega-dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       <span>Services</span>
+    </a>
+  <ul class="dropdown-menu mega-dropdown-menu row">
+    <li class="mega-dropdown-col col-md-3">
+      <ul>
+        <li class="dropdown-header">
+                    <h3 class="meganav-section-title text-uppercase">Two columns: Stacked</h3>
+                </li>
+        <li>
+                    <a href="portfolio-2-cols-stacked-grid-boxed.html">
+                        Grid: Boxed
+                    </a>
+                </li>
+        <li>
+                    <a href="portfolio-2-cols-stacked-grid-fluid.html">
+                        Grid: Fluid
+                    </a>
+                </li>
+        <li>
+                    <a href="portfolio-2-cols-stacked-masonry-fluid.html">
+                        Masonry: Fluid + Autoload
+                    </a>
+                </li>
+
+                <li class="dropdown-header mt-1">
+                    <h3 class="meganav-section-title text-uppercase">
+                        Two columns: Spaced
+                    </h3>
+                </li>
+        <li>
+                    <a href="portfolio-2-cols-spaced-grid-boxed.html">
+                        Grid: Boxed + Autoload
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-2-cols-spaced-grid-text-boxed.html">
+                        Grid text: Boxed
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-2-cols-spaced-cards-boxed.html">
+                        Cards: Boxed + Autoload
+                    </a>
+                </li>
+      </ul>
+    </li>
+    <li class="mega-dropdown-col col-md-3">
+            <ul>
+        <li class="dropdown-header">
+                    <h3 class="meganav-section-title text-uppercase">Three columns: Stacked</h3>
+                </li>
+        <li>
+                    <a href="portfolio-3-cols-stacked-grid-boxed.html">
+                        Grid: Boxed
+                    </a>
+                </li>
+        <li>
+                    <a href="portfolio-3-cols-stacked-grid-fluid.html">
+                        Grid: Fluid
+                    </a>
+                </li>
+        <li>
+                    <a href="portfolio-3-cols-stacked-masonry-fluid.html">
+                        Masonry: Fluid + Autoload
+                    </a>
+                </li>
+
+                <li class="dropdown-header mt-1">
+                    <h3 class="meganav-section-title text-uppercase">
+                        Three columns: Spaced
+                    </h3>
+                </li>
+        <li>
+                    <a href="portfolio-3-cols-spaced-grid-boxed.html">
+                        Grid: Boxed + Autoload
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-3-cols-spaced-grid-text-boxed.html">
+                        Grid text: Boxed
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-3-cols-spaced-cards-boxed.html">
+                        Cards: Boxed + Autoload
+                    </a>
+                </li>
+      </ul>
+    </li>
+    <li class="mega-dropdown-col col-md-3">
+            <ul>
+                <li class="dropdown-header">
+                    <h3 class="meganav-section-title text-uppercase">Four columns: Stacked</h3>
+                </li>
+                <li>
+                    <a href="portfolio-4-cols-stacked-grid-boxed.html">
+                        Grid: Boxed
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-4-cols-stacked-grid-fluid.html">
+                        Grid: Fluid
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-4-cols-stacked-masonry-fluid.html">
+                        Masonry: Fluid + Autoload
+                    </a>
+                </li>
+
+                <li class="dropdown-header mt-1">
+                    <h3 class="meganav-section-title text-uppercase">
+                        Four columns: Spaced
+                    </h3>
+                </li>
+                <li>
+                    <a href="portfolio-4-cols-spaced-grid-boxed.html">
+                        Grid: Boxed + Autoload
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-4-cols-spaced-grid-text-boxed.html">
+                        Grid text: Boxed
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-4-cols-spaced-cards-boxed.html">
+                        Cards: Boxed + Autoload
+                    </a>
+                </li>
+            </ul>
+    </li>
+    <li class="mega-dropdown-col col-md-3">
+      <ul>
+        <li class="dropdown-header">
+                    <h3 class="meganav-section-title text-uppercase">Single project</h3>
+                </li>
+        <li>
+                    <a href="portfolio-item-1.html">
+                        Single project - Style 1
+                    </a>
+                </li>
+                <li>
+                    <a href="portfolio-item-2.html">
+                        Single project - Style 2
+                    </a>
+                </li>
+      </ul>
+    </li>
+  </ul>
+</li>
+
+<!-- <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       <span>Blog</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Classic</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header text-uppercase">
+                    Full width
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-full-width-2-cols.html">
+                        Blog Classic: 2 columns
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-full-width-3-cols.html">
+                        Blog Classic: 3 columns
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-full-width-4-cols.html">
+                        Blog Classic: 4 columns
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-full-width-2-cols-masonry.html">
+                        Blog Classic: Masonry + 2 columns
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-full-width-3-cols-masonry.html">
+                        Blog Classic: Masonry + 3 columns
+                    </a>
+                </li>
+
+                <li class="dropdown-header text-uppercase">
+                    With sidebar
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-sidebar-left.html">
+                        Blog Classic: Left sidebar
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-sidebar-right.html">
+                        Blog Classic: Right sidebar
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-sidebar-left-masonry.html">
+                        Blog Classic: Masonry + Left sidebar
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-classic-sidebar-right-masonry.html">
+                        Blog Classic: Masonry + Right sidebar
+                    </a>
+                </li>
+            </ul>
+        </li>
+                <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Cards</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header text-uppercase">
+                    Full width
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-full-width-2-cols.html">
+                        Blog Cards: 2 columns
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-full-width-3-cols.html">
+                        Blog Cards: 3 columns
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-full-width-4-cols.html">
+                        Blog Cards: 4 columns
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-full-width-2-cols-masonry.html">
+                        Blog Cards: Masonry + 2 columns
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-full-width-3-cols-masonry.html">
+                        Blog Cards: Masonry + 3 columns
+                    </a>
+                </li>
+
+                <li class="dropdown-header text-uppercase">
+                    With sidebar
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-sidebar-left.html">
+                        Blog Cards: Left sidebar
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-sidebar-right.html">
+                        Blog Cards: Right sidebar
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-sidebar-left-masonry.html">
+                        Blog Cards: Masonry + Left sidebar
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="blog-cards-sidebar-right-masonry.html">
+                        Blog Cards: Masonry + Right sidebar
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a tabindex="-1" href="blog-post-classic-image.html">Single post: Classic</a>
+        </li>
+        <li>
+            <a tabindex="-1" href="blog-post-cards-image.html">Single post: Cards</a>
+        </li>
+    </ul>
+</li> -->
+
+<!-- Shop -->
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       <span>Fuel Surcharge</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Grid shop</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-shop-grid-1.html">
+                        Homepage: Slider
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-shop-grid-2.html">
+                        Homepage: Sidebar + Slider
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-grid-categories-1.html">
+                        Categories: Full width
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-grid-categories-2.html">
+                        Categories: Mosaic
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-grid-products-1.html">
+                        Products: Full width
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-grid-products-2.html">
+                        Products: Sidebar
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-grid-product-1.html">
+                        Single product
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-grid-checkout-cart.html">Cart: Checkout</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-grid-cart.html">Cart: Simple</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Minimalist shop</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-shop-minimalist-1.html">
+                        Homepage: Mosaic
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-shop-minimalist-2.html">
+                        Homepage: Slider
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-minimalist-categories-1.html">
+                        Categories: Full width
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-minimalist-categories-mosaic-1.html">
+                        Categories: Mosaic
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-minimalist-products-1.html">
+                        Products: Full width
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-minimalist-products-2.html">
+                        Products: Sidebar
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-minimalist-product-1.html">
+                        Single product
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-minimalist-cart.html">Cart</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Cards shop</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="homepage-shop-cards-1.html">
+                        Homepage: Slider
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="homepage-shop-cards-2.html">
+                        Homepage: Sidebar + Slider
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-cards-categories-1.html">
+                        Categories: Full width
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-cards-categories-2.html">
+                        Categories: Sidebar
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-cards-products-1.html">
+                        Products: Full width
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-cards-products-2.html">
+                        Products: Sidebar
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-cards-product-1.html">
+                        Single product
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-cards-checkout-cart.html">Cart: Checkout</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="shop-cards-cart.html">Cart: Simple</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</li>
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       <span>Contact</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="dropdown dropdown-submenu">
+            <a href="#">
+               <span>Components</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header text-uppercase">
+                    Kit &amp; Docs
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="_components.html">
+                        UI Kit
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="_documentation.html">
+                        Documentation
+                    </a>
+                </li>
+                <li class="dropdown-header text-uppercase">
+                    Components
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="_blocks.html">
+                        Blocks
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="_icon-blocks.html">
+                        Icon blocks
+                    </a>
+                </li>
+                <li class="">
+                    <a tabindex="-1" href="_social-buttons.html">
+                        Social buttons
+                    </a>
+                </li>
+
+                <li class="">
+                    <a tabindex="-1" href="_forms.html">
+                        Forms
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Boxed layout</a>
+            <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="layout-boxed-1.html">With margin</a></li>
+                <li><a tabindex="-1" href="layout-boxed-2.html">No margin</a></li>
+            </ul>
+        </li>
+        <li class="dropdown dropdown-submenu">
+            <a tabindex="-1" href="#">Headers</a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="_header-default-caps.html">
+                        Default header: Light
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-inverse.html">
+                        Default header: Dark
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-transparent.html">
+                        Transparent header: Light
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-transparent-inverse-bb.html">
+                        Transparent header + border: Dark
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-transparent-bb.html">
+                        Transparent header + border: Light
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-transparent-inverse.html">
+                        Transparent header: Dark
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-opaque.html">
+                        Opaque header: Light
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-opaque-inverse.html">
+                        Opaque header: Dark
+                    </a>
+                </li>
+                <li class="dropdown-header text-uppercase">
+                    And more ...
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-sm.html">
+                        Small header: Dark
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-centered-logo.html">
+                        Small header + Centered logo : Light
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-strong.html">
+                        Extra strong header: Light
+                    </a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="_header-default-caps-navbar-right.html">
+                        Default header + right nav
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</li>
+
+                    <li class="dropdown-icon hidden-xs hidden-sm">
+            <a href="#" class="btn-st-trigger ttip" data-effect="st-effect-1">
+              <span><i class="fa fa-bars"></i></span>
+            </a>
+          </li>
+          
+                    <!-- Login button -->
+                    <li class="dropdown-icon dropdown-icon--style-2 hidden-xs hidden-sm">
+                      <a href="#" data-toggle="dropdown">
+                        <span>
+                          <i class="fa fa-user"></i>
+                        </span>
+                      </a>
+                      <ul class="dropdown-menu dropdown-form">
+    <li>
+        <div class="dropdown-form-inner">
+            <h3 class="heading heading-6 text-uppercase strong-500">Sign in</h3>
+            <form class="form-default mt-2" role="form">
+                <div class="form-group form-group-lg has-icon">
+                    <label class="control-label sr-only" for="inputEmail">Email</label>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    <span class="fa fa-user form-control-icon" aria-hidden="true"></span>
+                </div>
+                <div class="form-group form-group-lg has-icon">
+                    <label class="control-label sr-only" for="inputEmail">Password</label>
+                    <input type="password" class="form-control" id="inputEmail" placeholder="Password">
+                    <span class="fa fa-lock form-control-icon" aria-hidden="true"></span>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="chkRememberMe">
+                    <label for="chkRememberMe">Remember me</label>
+                </div>
+                <div class="mt-2">
+                    <button type="submit" class="btn btn-block btn-base-1">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </li>
+
+    <li class="text-center b-xs-top">
+        <a href="sign-up-1.html">
+            Create a new account
+        </a>
+    </li>
+</ul>
+          </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+  <!-- GLOBAL SEARCH -->
+    <section id="sctGlobalSearch" class="global-search">
+    <div class="relative">
+        <!-- Backdrop for global search -->
+        <div class="global-search-backdrop"></div>
+
+        <!-- Search form -->
+        <form class="form-horizontal form-global-search" role="form">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="text" class="search-input" placeholder="Type and hit enter ...">
+                    </div>
+                </div>
+
+                <!-- Close button -->
+                <button type="button" class="global-search-close-btn css-animate" data-target="#sctGlobalSearch" title="Close search bar">
+                    <i class="icon ion-close-round"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+</div>
     <%= yield %>
+
+                    <!-- FOOTER -->
+                    <footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-4">
+                    <div class="col">
+                       <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
+                          Main menu
+                       </h4>
+
+                       <ul class="footer-links">
+                            <li>
+                                <a href="index.html" title="Home">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about-creative.html" title="About us">
+                                    About us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="services-creative.html" title="Services">
+                                    Services
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blog-cards-sidebar-left.html" title="Blog">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact-card.html" title="Contact">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+
+                <div class="col-md-2 col-sm-4">
+                    <div class="col">
+                       <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
+                           Help and support
+                       </h4>
+
+                       <ul class="footer-links">
+                            <li>
+                                <a href="" title="Help center">
+                                    Help center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Discussions">
+                                    Discussions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Contact support">
+                                    Contact support
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Knowledge center">
+                                    Knowledge center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Jobs">
+                                    FAQ
+                                </a>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+
+                <div class="col-md-2 col-sm-4">
+                    <div class="col">
+                       <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
+                           Our services
+                       </h4>
+
+                       <ul class="footer-links">
+                            <li>
+                                <a href="" title="Help center">
+                                    Concept
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Discussions">
+                                    UI/UX design
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Contact support">
+                                    Web developement
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Knowledge center">
+                                    Custom solutions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Jobs">
+                                    Branding
+                                </a>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+
+                <span class="space-sm-only-3"></span>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="col">
+                        <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
+                            From the blog
+                        </h4>
+
+                        <ul class="footer-links">
+                            <li>
+                                <a href="" title="">Clamtown weekly news</a>
+                                <small class="footer-link-date">June 20, 2017</small>
+                            </li>
+                            <li class="">
+                                <a href="" title="">Fall in love with Tribus</a>
+                                <small class="footer-link-date">June 18, 2017</small>
+                            </li>
+                            <li class="">
+                                <a href="" title="">Cracking the Tribus code</a>
+                                <small class="footer-link-date">March 30, 2017</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="col">
+                        <h4 class="heading heading-xs strong-600 text-uppercase mb-1">
+                            Check our feed
+                        </h4>
+
+                        <div class="photostream">
+                            <span class="photo-wrapper">
+                                <a href="images/prv/blog/img-1-200x200.jpg" class="theater">
+                                    <img src="images/prv/blog/img-1-200x200.jpg">
+                                </a>
+                            </span>
+                            <span class="photo-wrapper">
+                                <a href="images/prv/blog/img-2-200x200.jpg" class="theater">
+                                    <img src="images/prv/blog/img-2-200x200.jpg">
+                                </a>
+                            </span>
+                            <span class="photo-wrapper">
+                                <a href="images/prv/block-img-3.jpg" class="theater">
+                                    <img src="images/prv/blog/img-3-200x200.jpg">
+                                </a>
+                            </span>
+                            <span class="photo-wrapper">
+                                <a href="images/prv/block-img-4.jpg" class="theater">
+                                    <img src="images/prv/blog/img-4-200x200.jpg">
+                                </a>
+                            </span>
+                            <span class="photo-wrapper">
+                                <a href="images/prv/block-img-5.jpg" class="theater">
+                                    <img src="images/prv/blog/img-5-200x200.jpg">
+                                </a>
+                            </span>
+                            <span class="photo-wrapper">
+                                <a href="images/prv/block-img-6.jpg" class="theater">
+                                    <img src="images/prv/blog/img-6-200x200.jpg">
+                                </a>
+                            </span>
+                            <span class="photo-wrapper">
+                                <a href="images/prv/block-img-7.jpg" class="theater">
+                                    <img src="images/prv/blog/img-7-200x200.jpg">
+                                </a>
+                            </span>
+                            <span class="photo-wrapper">
+                                <a href="images/prv/block-img-8.jpg" class="theater">
+                                    <img src="images/prv/blog/img-8-200x200.jpg">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row flex flex-items-xs-middle">
+                <div class="col col-sm-7 col-xs-12">
+                    <div class="copyright">
+                        Copyright &copy; 2017                        <a href="http://webpixels.io" target="_blank" title="Webpixels - Official Website">
+                            <strong>Webpixels</strong>
+                        </a> -
+                        All rights reserved
+                    </div>
+                </div>
+                <div class="col col-sm-5 col-xs-12">
+                    <div class="text-xs-right">
+                        <ul class="social-media social-media--style-1-v4">
+                            <li>
+                                <a href="#" class="facebook" target="_blank" data-toggle="tooltip" data-original-title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="instagram" target="_blank" data-toggle="tooltip" data-original-title="Instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Dribbble">
+                                    <i class="fa fa-dribbble"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dribbble" target="_blank" data-toggle="tooltip" data-original-title="Github">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+                </div>
+            </div>
+        </div><!-- END: st-pusher -->
+    </div><!-- END: st-container -->
+</div><!-- END: body-wrap -->
+    <!-- SCRIPTS -->
+    <a href="#0" class="back-to-top"></a>
+
+    <!-- Required JSs -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- Essential JSs -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-extensions/bootstrap-dropdownhover.js"></script>
+    <script src="js/bootstrap-extensions/bootstrap-dropdowneffect.js"></script>
+    <script src="js/bootstrap-extensions/bootstrap-validator.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/slidebar/slidebar.js"></script>
+
+    <!-- Assets - Required -->
+    <script src="assets/headroom/headroom.min.js"></script>
+    <script src="assets/headroom/jquery.headroom.min.js"></script>
+    <script src="assets/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/swiper/js/swiper.min.js"></script>
+    <script src="assets/parallax/parallax.min.js"></script>
+    <script src="assets/viewport-checker/viewportchecker.min.js"></script>
+    <script src="assets/milestone-counter/jquery.countTo.js"></script>
+
+    <!-- Cross-browser responsivity scripts -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Analitycs JS -->
+    <script type="text/javascript" src="js/wpx.ga.js"></script>
+
+
+    <!-- RS5.0 Core JS Files -->
+    <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="js/revolution/revolution-slider-hero-youtube-2.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+    <!-- Cube Portfolio -->
+    <script src="assets/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <script src="assets/cubeportfolio/js/main.4-col.mosaic.js"></script>
+
+    <!-- App JS -->
+    <script src="js/wpx.app.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,249 @@
+.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.col {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+//
+// .col-auto {
+//     -webkit-box-flex: 0;
+//     -webkit-flex: 0 0 auto;
+//     -ms-flex: 0 0 auto;
+//     flex: 0 0 auto;
+//     width: auto;
+// }
+
+.flex-wrap-item {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex-grow: 1;
+}
+// Flex vertical alignment
+
+.flex-items-xs-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.flex-items-xs-middle {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex-items-xs-bottom {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+// Flex horizontal alignment
+
+.flex-items-xs-center {
+    justify-content: center;
+}
+
+.flex-items-xs-left {
+    justify-content: flex-start;
+}
+
+.flex-items-xs-right {
+    justify-content: flex-end;
+}
+// Col widths for flex
+
+.col.col-xs-12 {
+    max-width: 100%;
+}
+
+.col.col-xs-11 {
+    max-width: 91.66666667%;
+}
+
+.col.col-xs-10 {
+    max-width: 83.33333333%;
+}
+
+.col.col-xs-9 {
+    max-width: 75%;
+}
+
+.col.col-xs-8 {
+    max-width: 66.66666667%;
+}
+
+.col.col-xs-7 {
+    max-width: 58.33333333%;
+}
+
+.col.col-xs-6 {
+    max-width: 50%;
+}
+
+.col.col-xs-5 {
+    max-width: 41.66666667%;
+}
+
+.col.col-xs-4 {
+    max-width: 33.33333333%;
+}
+
+.col.col-xs-3 {
+    max-width: 25%;
+}
+
+.col.col-xs-2 {
+    max-width: 16.66666667%;
+}
+
+.col.col-xs-1 {
+    max-width: 8.33333333%;
+}
+
+@media (max-width: 767px) {
+    .col.col-xs-12 {
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .col.col-sm-12 {
+        max-width: 100%;
+    }
+
+    .col.col-sm-11 {
+        max-width: 91.66666667%;
+    }
+
+    .col.col-sm-10 {
+        max-width: 83.33333333%;
+    }
+
+    .col.col-sm-9 {
+        max-width: 75%;
+    }
+
+    .col.col-sm-8 {
+        max-width: 66.66666667%;
+    }
+
+    .col.col-sm-7 {
+        max-width: 58.33333333%;
+    }
+
+    .col.col-sm-6 {
+        max-width: 50%;
+    }
+
+    .col.col-sm-5 {
+        max-width: 41.66666667%;
+    }
+
+    .col.col-sm-4 {
+        max-width: 33.33333333%;
+    }
+
+    .col.col-sm-3 {
+        max-width: 25%;
+    }
+
+    .col.col-sm-2 {
+        max-width: 16.66666667%;
+    }
+
+    .col.col-sm-1 {
+        max-width: 8.33333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col.col-md-12 {
+        max-width: 100%;
+    }
+
+    .col.col-md-11 {
+        max-width: 91.66666667%;
+    }
+
+    .col.col-md-10 {
+        max-width: 83.33333333%;
+    }
+
+    .col.col-md-9 {
+        max-width: 75%;
+    }
+
+    .col.col-md-8 {
+        max-width: 66.66666667%;
+    }
+
+    .col.col-md-7 {
+        max-width: 58.33333333%;
+    }
+
+    .col.col-md-6 {
+        max-width: 50%;
+    }
+
+    .col.col-md-5 {
+        max-width: 41.66666667%;
+    }
+
+    .col.col-md-4 {
+        max-width: 33.33333333%;
+    }
+
+    .col.col-md-3 {
+        max-width: 25%;
+    }
+
+    .col.col-md-2 {
+        max-width: 16.66666667%;
+    }
+
+    .col.col-md-1 {
+        max-width: 8.33333333%;
+    }
+}
+
+// Make flex columns fluid only for portrit orientations (fix for tablets)
+@media (min-width: 768px) and (orientation:portrait) {
+    .col.col-sm-12 {
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (orientation:portrait) {
+    .col.col-md-12 {
+        -webkit-flex-basis: auto;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        max-width: 100%;
+    }
+}

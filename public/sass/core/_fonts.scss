@@ -1,0 +1,100 @@
+/* ==========  Montserrat  ========== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Light.eot');
+    src: url('../fonts/montserrat/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-Light.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Regular.eot');
+    src: url('../fonts/montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-Regular.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Medium.eot');
+    src: url('../fonts/montserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-Medium.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-SemiBold.eot');
+    src: url('../fonts/montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-SemiBold.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Bold.eot');
+    src: url('../fonts/montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-Bold.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Extrabold.eot');
+    src: url('../fonts/montserrat/Montserrat-Extrabold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-Extrabold.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Extraboldt.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Black.eot');
+    src: url('../fonts/montserrat/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat/Montserrat-Black.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* ==========  Blzee  ========== */
+@font-face {
+    font-family: 'Blzee';
+    src: url('../fonts/blzee/blzee.eot');
+    src: url('../fonts/blzee/blzee.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blzee/blzee.woff') format('woff'),
+         url('../fonts/blzee/blzee.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// CUSTOM FONT 1 - Sue Ellen Francisco (You can use the helper class .font-custom-1)
+@font-face {
+    font-family: 'Sue Ellen Francisco';
+    src: url('../fonts/other/sue-ellen-francisco.ttf');
+    src: url('../fonts/other/sue-ellen-francisco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+// CUSTOM FONT 2 - Pcifico (You can use the helper class .font-custom-2)
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../fonts/other/pacifico.ttf');
+    src: url('../fonts/other/pacifico.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+// CUSTOM FONT 3 - Pcifico (You can use the helper class .font-custom-3)
+@font-face {
+    font-family: 'YellowTail';
+    src: url('../fonts/other/yellowtail-regular.ttf');
+    src: url('../fonts/other/yellowtail-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
