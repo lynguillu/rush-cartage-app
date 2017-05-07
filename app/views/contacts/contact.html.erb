@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Tribus: Mutipurpose Template</title>
+
+<!-- Page loader -->
+<script src="assets/pace/js/pace.min.js"></script>
+<link rel="stylesheet" href="assets/pace/css/pace-minimal.css" type="text/css">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
+
+
+<!-- CSS animation library -->
+<link rel="stylesheet" href="assets/animate/animate.min.css" type="text/css">
+
+<!-- Plugins -->
+<link rel="stylesheet" href="assets/bootstrap-select/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="assets/swiper/css/swiper.min.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css" type="text/css">
+<link rel="stylesheet" href="fonts/line-icons/line-icons.css" type="text/css">
+<link rel="stylesheet" href="fonts/line-icons-pro/line-icons-pro.css" type="text/css">
+
+<!-- Global style (main) -->
+<link id="stylesheet" type="text/css" href="css/global-style.min.css" rel="stylesheet" media="screen">
+<!-- Custom style - Remove if not necessary -->
+<link type="text/css" href="css/custom-style.css" rel="stylesheet">
+
+<!-- Favicon -->
+<link href="images/favicon.png" rel="icon" type="image/png">
+
+
+</head>
+<body>
+
+
+<!-- MAIN WRAPPER -->
+<div class="body-wrap" data-template-mode="cards">
+    <div id="st-container" class="st-container">
+
+        <nav class="st-menu st-effect-1" id="menu-1">
+    <div class="st-profile">
+        <div class="st-profile-user-wrapper">
+            <div class="profile-user-image">
+                <img src="images/prv/people/person-1.jpg" class="img-circle" />
+            </div>
+            <div class="profile-user-info">
+                <span class="profile-user-name">Bertram Frank Ozzie</span>
+                <span class="profile-user-email">username@example.com</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="st-menu-list mt-2">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-bookmarks-outline"></i> Theme documentation
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-cart-outline"></i> Purchase Tribus
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Account</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-person-outline"></i> User profile
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-location-outline"></i> My addresses
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-card"></i> My cards
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-unlocked-outline"></i> Password update
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Support center</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-information-outline"></i> About Tribus
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-email-outline"></i> Contact &amp; support
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-camera"></i> Getting started
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+        <div class="st-pusher">
+            <div class="st-content">
+                <div class="st-content-inner">
+                    <!-- HEADER -->
+                    <div class="header-1 " data-offset-top="84" data-nav-animation="fadeInDown" id="header">
+
+
+  <!-- GLOBAL SEARCH -->
+    <section id="sctGlobalSearch" class="global-search">
+    <div class="relative">
+        <!-- Backdrop for global search -->
+        <div class="global-search-backdrop"></div>
+
+        <!-- Search form -->
+        <form class="form-horizontal form-global-search" role="form">
+            <div class="container relative">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input type="text" class="search-input" placeholder="Type and hit enter ...">
+                    </div>
+                </div>
+
+                <!-- Close button -->
+                <button type="button" class="global-search-close-btn css-animate" data-target="#sctGlobalSearch" title="Close search bar">
+                    <i class="icon ion-close-round"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+</div>
+
+                    <section class="parallax-section parallax-section-lg" style="background-image: url('images/backgrounds/page-title/page-title-img-1.jpg'); background-position: center 13px; min-height: 320px;">
+
+                        <div class="mask mask-base-1--style-1"></div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="py-3">
+                                        <h1 class="heading heading-1 c-white strong-400 text-normal">
+                                            We are here to help you. <strong class="strong-600">Anytime!</strong>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="slice sct-color-2">
+                        <div class="container container-over-top">
+                            <div class="container-inner sct-color-1">
+                                <!-- Map canvas -->
+                                <div id="google-map">
+                                    <!-- #google-container will contain the map  -->
+                                    <div id="map_canvas" class="map-canvas"></div>
+                                    <!-- #cd-zoom-in and #zoom-out will be used to create our custom buttons for zooming-in/out -->
+                                    <div id="map-zoom-in"></div>
+                                    <div id="map-zoom-out"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="slice pt-0 sct-color-2">
+                        <div class="container">
+                            <div class="block-card-wrapper">
+                                <div class="block-card-section z-depth-1-bottom">
+                                    <div class="" id="same_height_1">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="px-2 py-2">
+                                                    <h3 class="heading heading-6 strong-600 text-uppercase">
+                                                        Send us a message
+                                                    </h3>
+
+                                                    <!-- Contact form -->
+                                                    <form class="form-default form-material mt-3" role="form">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label for="" class="text-uppercase  c-gray-light">Your name</label>
+                                                                    <input type="text" class="form-control input-lg" placeholder="">
+                                                                    <span class="bar"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label for="" class="text-uppercase c-gray-light">Email address</label>
+                                                                    <input type="email" class="form-control input-lg" placeholder="">
+                                                                    <span class="bar"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label for="" class="text-uppercase c-gray-light">Website</label>
+                                                                    <input type="text" class="form-control input-lg" placeholder="">
+                                                                    <span class="bar"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label for="" class="text-uppercase c-gray-light">Phone</label>
+                                                                    <input type="text" class="form-control input-lg" placeholder="">
+                                                                    <span class="bar"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <div class="form-group">
+                                                                    <label for="" class="text-uppercase c-gray-light">Message</label>
+                                                                    <textarea class="form-control no-resize" rows="5" placeholder=""></textarea>
+                                                                    <span class="bar"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <button type="submit" class="btn btn-lg btn-base-1 mt-1">Send message</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="same-height bg-base-1" data-same-height="#same_height_1">
+                                                    <div class="px-2 py-2">
+                                                        <h3 class="heading heading-6 strong-500 text-uppercase">
+                                                            Contact information
+                                                        </h3>
+
+                                                        <p class="mt-1 mb-1">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.
+                                                        </p>
+
+                                                        <div class="icon-block--style-3 mb-1 mt-3">
+                                                            <i class="icon ion-ios-telephone bg-base-4"></i>
+                                                            <span class="heading heading-6 strong-400">
+                                                                +33 - 072 4884 2332
+                                                            </span>
+                                                        </div>
+
+                                                        <div class="icon-block--style-3 mb-1">
+                                                            <i class="icon ion-ios-email bg-base-4"></i>
+                                                            <span class="heading heading-6 strong-400">
+                                                                office@example.com
+                                                            </span>
+                                                        </div>
+
+                                                        <div class="icon-block--style-3">
+                                                            <i class="icon ion-ios-location bg-base-4"></i>
+                                                            <span class="heading heading-6 strong-400">
+                                                                9975 Emerald Escape, LA
+                                                            </span>
+                                                        </div>
+
+                                                        <span class="clearfix"></span>
+
+                                                        <a href="#" class="btn btn-block btn-base-5 btn-outline btn-circle mt-3">
+                                                            Get directions
+                                                        </a>
+
+                                                        <span class="clearfix"></span>
+
+                                                        <div class="text-xs-center">
+                                                            <ul class="social-media social-media--style-1-v4 mt-2">
+                                                                <li>
+                                                                    <a href="#" class="facebook" target="_blank" title="Facebook">
+                                                                        <i class="fa fa-facebook"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="instagram" target="_blank">
+                                                                        <i class="fa fa-instagram"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="dribbble" target="_blank">
+                                                                        <i class="fa fa-dribbble"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="dribbble" target="_blank">
+                                                                        <i class="fa fa-github"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+    
+
+
+  
+                </div>
+            </div>
+        </div><!-- END: st-pusher -->
+    </div><!-- END: st-container -->
+</div><!-- END: body-wrap -->
+
+<!-- SCRIPTS -->
+<a href="#0" class="back-to-top"></a>
+
+<!-- Required JSs -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+
+<!-- Essential JSs -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/bootstrap-extensions/bootstrap-dropdownhover.js"></script>
+<script src="js/bootstrap-extensions/bootstrap-dropdowneffect.js"></script>
+<script src="js/bootstrap-extensions/bootstrap-validator.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/slidebar/slidebar.js"></script>
+
+<!-- Assets - Required -->
+<script src="assets/headroom/headroom.min.js"></script>
+<script src="assets/headroom/jquery.headroom.min.js"></script>
+<script src="assets/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="assets/swiper/js/swiper.min.js"></script>
+<script src="assets/parallax/parallax.min.js"></script>
+<script src="assets/viewport-checker/viewportchecker.min.js"></script>
+<script src="assets/milestone-counter/jquery.countTo.js"></script>
+
+<!-- Cross-browser responsivity scripts -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Google Analitycs JS -->
+<script type="text/javascript" src="js/wpx.ga.js"></script>
+
+
+<!-- Google maps -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="js/google-maps/google-maps-custom.js"></script>
+
+<!-- App JS -->
+<script src="js/wpx.app.js"></script>
+
+</body>
+</html>

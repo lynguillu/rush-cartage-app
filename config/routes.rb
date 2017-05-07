@@ -37,5 +37,7 @@ Rails.application.routes.draw do
   get "/clients_login" => "client_sessions#new"
   post "/clients_login" => "client_sessions#create"
   get "/clients_logout" => "client_sessions#destroy"
+  
+  get "/contacts" => "contacts#index"
 
 end
