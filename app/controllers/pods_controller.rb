@@ -19,11 +19,10 @@ class PodsController < ApplicationController
       dropoff_address: params[:dropoff_address],
       scheduled_dropoff: params[:scheduled_dropoff],
       actual_dropoff: params[:actual_dropoff],
-      attachement: params[:attachement],
-      image: params[:image]
-      )
+      asset: params[:asset]
+    )
     pod.save
-    render "create.html.erb"
+    redirect_to "/pods"
   end
 
   def show

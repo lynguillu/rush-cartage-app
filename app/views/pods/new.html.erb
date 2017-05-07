@@ -1,9 +1,16 @@
+<div class="container">
+  
 <h1>Create a New POD</h1>
 
 
-<%= form_tag "/pods", method: :post do %>
+<%= form_tag "/pods", method: :post, multipart: true do %>
 <div class="form-group">
-  Driver Name: <input type="text" class="form-control" name="driver_id">
+  Driver Name: <!-- <input type="text" class="form-control" name="driver_id"> -->
+  <select name="driver_id" class="form-control">
+    <% Driver.all.each do |driver| %>
+      <option value="<%= driver.id %>"><%= driver.name %></option>
+    <% end %>
+  </select>
 </div>
 <div class="form-group">
   Client Name: <input type="text" class="form-control" name="client_id">
@@ -12,7 +19,7 @@
   Pick Address: <input type="text" class="form-control" name="pickup_address">
 </div>
 <div class="form-group">
-  Scheduled Pickup: <input type="text" class="form-control" name="scheduled_pickup">
+  Scheduled Pickup: <input type="datetime-local" class="form-control" name="scheduled_pickup">
 </div>
 <div class="form-group">
   Actual Pickup: <input type="text" class="form-control" name="actual_pickup">
@@ -26,7 +33,13 @@
 <div class="form-group">
   Scheduled Dropoff: <input type="text" class="form-control" name="actual_dropoff">
 </div>
+<div class="form-group">
+  Asset: <input type="file" class="form-control" name="asset">
+</div>
 
 <input type="submit" class="btn btn-default" value="create POD">
+<input type="file">
 <% end %>
   <a href="/pods">Back to all PODS</a>
+
+</div>

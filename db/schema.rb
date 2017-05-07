@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170423192209) do
+ActiveRecord::Schema.define(version: 20170507192623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,10 +51,14 @@ ActiveRecord::Schema.define(version: 20170423192209) do
     t.datetime "scheduled_pickup"
     t.datetime "scheduled_dropoff"
     t.datetime "actual_pickup"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.datetime "actual_dropoff"
     t.string   "image"
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
   end
 
 end
