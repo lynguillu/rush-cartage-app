@@ -1,6 +1,6 @@
 <div class="container">
   
-<h3>Upload POD</h3>
+<h2>Upload POD</h2>
 
 
 <%= form_tag "/pods", method: :post, multipart: true do %>
@@ -26,23 +26,29 @@
 <div class="form-group">
  Pickup Location: <input type="text" class="form-control" name="pickup_address">
 </div>
+
+
 <div class="form-group">
-<div class="form-group">
- Dropoff Location: <input type="text" class="form-control" name="pickup_address">
+ Dropoff Location: <input type="text" class="form-control" name="dropoff_address">
 </div>
+
 <div class="form-group">
-  Delivery Date/Time: <input type="datetime-local" class="form-control" name="scheduled_pickup">
+  Delivery Date/Time: <input type="datetime-local" class="form-control" name="delivery_date">
 </div>
+
 <div class="form-group">
-  Consignee: <input type="text" class="form-control" name="actual_pickup">
+  Consignee: <input type="text" class="form-control" name="consignee">
 </div>
+
 <div class="form-group">
-  Contact Person at Delivery: <input type="text" class="form-control" name="dropoff_address">
+  Contact Person at Delivery: <input type="text" class="form-control" name="contact_person">
 </div>
+
 <p>NOTES:</p>
 <textarea rows="4" cols="50">
 </textarea>
 <br><br>
+
 <div class="form-group">
   Asset: <input type="file" class="form-control" name="asset">
 </div>
@@ -50,7 +56,7 @@
 <input type="submit" class="btn btn-default" value="create POD">
 <br><input type="file">
 <% end %>
-  <a href="/pods">Back to all PODS</a>
+<a href="/pods">Back to all PODS</a>
 
-</div>
+
 </div>

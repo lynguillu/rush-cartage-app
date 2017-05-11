@@ -14,11 +14,11 @@ class PodsController < ApplicationController
       driver_id: params[:driver_id],
       client_id: params[:client_id],
       pickup_address: params[:pickup_address],
-      scheduled_pickup: params[:scheduled_pickup],
-      actual_pickup: params[:actual_pickup],
       dropoff_address: params[:dropoff_address],
-      scheduled_dropoff: params[:scheduled_dropoff],
-      actual_dropoff: params[:actual_dropoff],
+      delivery_date: params[:delivery_date],
+      consignee: params[:consignee],
+      contact_person: params[:contact_person],
+      notes: params[:notes],
       asset: params[:asset]
     )
     pod.save
