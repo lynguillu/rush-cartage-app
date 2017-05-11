@@ -11,6 +11,7 @@ class PodsController < ApplicationController
 
   def create
     pod = Pod.new(
+      load: params[:load],
       driver_id: params[:driver_id],
       client_id: params[:client_id],
       pickup_address: params[:pickup_address],

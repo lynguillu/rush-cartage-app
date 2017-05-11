@@ -3,11 +3,12 @@
 <div class="col-md-4">
   <div class="well">
     <h3><a href="/pods/<%= @pod.id %>">
-
+   
+    <h3>Load #: <%= @pod.load %></a></h3>
     <h3>Driver Name: <%= @pod.driver_id %></a></h3>
     <h3>Client Name: <%= @pod.client_id %></h3>
-    <h3>Pick Address: <%= @pod.pickup_address %></h3>
-    <h3>Dropoff Address: <%= @pod.dropoff_address%></h3>
+    <h3>Origin: <%= @pod.pickup_address %></h3>
+    <h3>Destination: <%= @pod.dropoff_address%></h3>
     <h3>Delivery Date: <%= @pod.delivery_date %></h3>
     <h3>Consignee: <%= @pod.consignee %></h3>
     <h3>Contact Person: <%= @pod.contact_person %></h3>
