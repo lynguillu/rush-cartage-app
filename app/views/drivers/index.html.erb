@@ -16,3 +16,73 @@
 
                                      
                                
+
+<br><div class="section-title section-title--style-1 text-xs-center">
+        <h3 class="section-title-inner heading-4 strong-600">Proof of Delivery Board</h3>
+        <span class="section-title-delimiter clearfix"></span>
+    </div>
+
+
+
+  <div class="mt-2 py-2 b-xs-top">
+    <div class="row">
+      <% @pods.each do | pod | %>
+        <div class="col-md-4">
+        <!-- Add margin to this div below -->
+          <div class="block block--style-3 z-depth-1-bottom" style="margin-bottom: 40px;">
+          
+            <div class="block-body text-xs-center">
+              <h5 class="heading heading-xs c-gray-light text-uppercase strong-500 letter-spacing-2 mb-0">Driver: <%= pod.driver.name %></h5>
+
+              <span class="short-delimiter short-delimiter--style-1 short-delimiter-light  short-delimiter-center short-delimiter-lg"></span>
+
+              <h3 class="heading heading-6 strong-500 text-normal">
+                <a href="#">Client: <%= pod.client.name %></a>
+              </h3>
+              <p>Driver ID: <%= pod.load %></p>
+              <p>Driver Name: <%= pod.pickup_address %></p>
+              <p>Destination: <%= pod.dropoff_address %></p>
+              <p>Delivery Date/Time: <%= pod.delivery_date %></p>
+              <p>Consignee: <%= pod.consignee %></p>
+              <p>Contact Person at Delivery: <%= pod.contact_person %></p>
+
+
+<div class="container">
+
+<% @drivers.each do | driver | %>
+  <div class="col-lg-4">
+    <div class="well">
+      <h6>Driver ID: <%= driver.id %></h6>
+      <h5><%= driver.name %></h5>
+      <h6><a href="/drivers/<%= driver.id %>">More details</a></h6>
+
+    </div>
+</div>
+<% end %>
+</div>
+
+
+
+              <span class="photo-wrapper">
+                  <a href="<%= pod.asset.url %>" class="theater">
+                      <img src="<%= pod.asset.url %>" alt="" width=200>
+                  </a>
+              </span>
+             
+
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+

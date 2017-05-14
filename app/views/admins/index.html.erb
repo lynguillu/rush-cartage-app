@@ -3,3 +3,313 @@
     <h3><b>Name:</b> <%= admin.name %></h3>
     <h3><b>Email:</b> <%= admin.email %></h3>
 <% end %>
+
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+               
+                <a class="navbar-brand" href="#">Dashboard</a>
+            </div>
+            <div class="collapse navbar-collapse">
+        
+                <form class="navbar-form navbar-left navbar-search-form" role="search">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" value="" class="form-control" placeholder="Search...">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+<body>
+
+
+<!-- MAIN WRAPPER -->
+<div class="body-wrap" data-template-mode="cards">
+    <div id="st-container" class="st-container">
+
+        <nav class="st-menu st-effect-1" id="menu-1">
+    <div class="st-profile">
+        <div class="st-profile-user-wrapper">
+            <div class="profile-user-image">
+                <img src="images/prv/people/person-1.jpg" class="img-circle" />
+            </div>
+            <div class="profile-user-info">
+                <span class="profile-user-name">Bertram Frank Ozzie</span>
+                <span class="profile-user-email">username@example.com</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="st-menu-list mt-2">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-bookmarks-outline"></i> Theme documentation
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-cart-outline"></i> Purchase Tribus
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Account</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-person-outline"></i> User profile
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-location-outline"></i> My addresses
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-card"></i> My cards
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-unlocked-outline"></i> Password update
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <h3 class="st-menu-title">Support center</h3>
+    <div class="st-menu-list">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-information-outline"></i> About Tribus
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="ion-ios-email-outline"></i> Contact &amp; support
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-camera"></i> Getting started
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+        <div class="st-pusher">
+            <div class="st-content">
+                <div class="st-content-inner">
+                    <!-- HEADER -->
+                    <div class="header-1 header-inner-wrapper" id="header">
+    <!-- GLOBAL SEARCH -->
+    <section id="sctGlobalSearch" class="global-search global-search--style-2">
+    <div class="relative">
+        <!-- Backdrop for global search -->
+        <div class="global-search-backdrop"></div>
+
+
+                    
+                    <!-- Search button -->
+ <li id="btnGlobalSearch" class="css-animate dropdown-icon hidden-xs hidden-sm" data-target="#sctGlobalSearch">
+<a href="#" data-toggle="dropdown">
+  <span>
+    <i class="fa fa-search"></i>
+                            </span>
+                        </a>
+                            </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+</div>
+ <section class="slice sct-color-2">
+    <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-md-push-4">
+                                    <div class="block-card-wrapper">
+                                        <div class="block-card-section z-depth-1-bottom">
+                                            <div class="block-card-section-inner">
+                                                <div class="text-xs-center">
+                                                    
+                                                    
+
+                            </div>
+                                            
+    </div>
+
+                                          <span class="clearfix"></span>
+
+                                            <div class="block block-post">
+                                                <div class="block-image mt-1">
+                                            </div>
+
+                                            <br><div class="section-title section-title--style-1 text-xs-center">
+        <h3 class="section-title-inner heading-4 strong-600">Shipment Document Request</h3>
+        <span class="section-title-delimiter clearfix"></span>
+    </div>
+
+    <div class="section-title section-title--style-1 text-xs-center">
+        <h6>Quickly request a Bill of Lading.<br>All you need is a load number and destination ZIP for convenient document delivery right at your fingertips.</h6>
+    </div>
+
+
+<!-- table -->
+
+<div class="content table-responsive table-full-width">
+
+      <table class="table table-striped" style="margin-left: 5%;
+        width: 90%;">
+        <thead>
+            <th>Load</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Delivery Date/Time</th>
+            <th>Driver</th>
+        </thead>
+        <tbody>
+        <% @pods.each do | pod | %>
+            <tr>
+                <td><%= pod.load%></td>
+                <td><%= pod.pickup_address%></td>
+                <td><%= pod.dropoff_address%></td>
+                <td><%= pod.delivery_date%></td>
+                <td><%= pod.driver.name%></td>
+            </tr>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+ </div>
+ 
+</div>
+</div>
+</div>
+<div class="col-md-4 col-md-pull-8">
+         <div class="sidebar">
+    <!-- About me -->
+    <div class="sidebar-object">
+        <div class="block-card-wrapper">
+            <div class="block-card-section z-depth-1-bottom">
+                <div class="block-card-section-inner">
+                    <div class="card-section-title">
+                        <h3 class="heading heading-6 strong-700 text-uppercase">
+                            Admin Dashboard
+                        </h3>
+                    </div>
+
+                 
+
+                        <div class="text-xs-center">
+                            <h3 class="heading heading-8 strong-700 text-uppercase mt-2">
+                                <a href="#">
+                                    Drivers POD
+                                </a>
+                            </h3>
+                            <h4 class="heading heading-xs strong-400 text-uppercase c-gray-light letter-spacing-2 mt-1">
+                                Interior Designer
+                            </h4>
+                            <p class="mt-2">
+                                22 years old and currently anchored in the beautiful city of Italy. I blog about anything that moves me and about what I love. So mostly food, fashion and everyday madness.
+                            </p>
+                            <div class="pt-1">
+                                <img src="images/prv/blog/signature-1.png" class="img-responsive img-center" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stay connected -->
+    <div class="sidebar-object">
+        <div class="block-card-wrapper">
+            <div class="block-card-section z-depth-1-bottom">
+                <div class="block-card-section-inner">
+                    <div class="card-section-title">
+                        <h3 class="heading heading-6 strong-700 text-uppercase">
+                            Stay connected
+                        </h3>
+                    </div>
+
+                    <div class="py-1 text-xs-center">
+                        <ul class="social-media social-media--style-1-v3 social-media-circle">
+                            <li>
+                                <a href="#" class="facebook" target="_blank" title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="instagram" target="_blank">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stay connected -->
+    <div class="sidebar-object">
+        <div class="block-card-wrapper">
+            <div class="block-card-section z-depth-1-bottom">
+                <div class="block-card-section-inner">
+                    <div class="card-section-title">
+                        <h3 class="heading heading-6 strong-700 text-uppercase">
+                            Subscribe to my newsletter
+                        </h3>
+                    </div>
+
+                    <div class="text-xs-center">
+                        <p class="mb-2">
+                            If you want to hear from us you can subscribe to our newsletter.
+                        </p>
+
+                        <form class="form-default" data-toggle="validator" role="form">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group has-feedback">
+                                        <label class="control-label sr-only">Email</label>
+                                        <input type="email" class="form-control input-lg" placeholder="Email" required>
+                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-sm btn-base-4">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</div>
+</div>
+</section>
+
+
+                </div>
+            </div>
+        </div><!-- END: st-pusher -->
+    </div><!-- END: st-container -->
+</div><!-- END: body-wrap -->
+
