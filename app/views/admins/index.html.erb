@@ -1,8 +1,4 @@
-<h1>Admins</h1>
-<% @admins.each do |admin| %>
-    <h3><b>Name:</b> <%= admin.name %></h3>
-    <h3><b>Email:</b> <%= admin.email %></h3>
-<% end %>
+
 
 <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -23,7 +19,10 @@
         </div>
     </nav>
 <body>
-
+<br><div class="section-title section-title--style-1 text-xs-center">
+        <h3 class="section-title-inner heading-4 strong-600">Admins Dashboard</h3>
+        <span class="section-title-delimiter clearfix"></span>
+    </div>
 
 <!-- MAIN WRAPPER -->
 <div class="body-wrap" data-template-mode="cards">
@@ -35,74 +34,14 @@
             <div class="profile-user-image">
                 <img src="images/prv/people/person-1.jpg" class="img-circle" />
             </div>
-            <div class="profile-user-info">
-                <span class="profile-user-name">Bertram Frank Ozzie</span>
-                <span class="profile-user-email">username@example.com</span>
-            </div>
+           
         </div>
     </div>
 
     <div class="st-menu-list mt-2">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-bookmarks-outline"></i> Theme documentation
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-cart-outline"></i> Purchase Tribus
-                </a>
-            </li>
-        </ul>
+        
     </div>
 
-    <h3 class="st-menu-title">Account</h3>
-    <div class="st-menu-list">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-person-outline"></i> User profile
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-location-outline"></i> My addresses
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-card"></i> My cards
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-unlocked-outline"></i> Password update
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <h3 class="st-menu-title">Support center</h3>
-    <div class="st-menu-list">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-information-outline"></i> About Tribus
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-email-outline"></i> Contact &amp; support
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-camera"></i> Getting started
-                </a>
-            </li>
-        </ul>
-    </div>
 </nav>
 
         <div class="st-pusher">
@@ -155,7 +94,7 @@
                                             </div>
 
                                             <br><div class="section-title section-title--style-1 text-xs-center">
-        <h3 class="section-title-inner heading-4 strong-600">Shipment Document Request</h3>
+        <h3 class="section-title-inner heading-4 strong-600">Proof of Delivery Board</h3>
         <span class="section-title-delimiter clearfix"></span>
     </div>
 
@@ -176,6 +115,7 @@
             <th>Destination</th>
             <th>Delivery Date/Time</th>
             <th>Driver</th>
+            <th>Download POD</th>
         </thead>
         <tbody>
         <% @pods.each do | pod | %>

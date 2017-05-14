@@ -1,6 +1,7 @@
 class DriversController < ApplicationController
   def index
     @drivers = Driver.all
+    @pods = Pod.all
     render "index.html.erb"
   end
   

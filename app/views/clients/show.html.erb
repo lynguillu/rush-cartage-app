@@ -1,34 +1,37 @@
-<h1>Client Info</h1>
 
-<h3><b>Client: <%= @client.name %></h3>
-<h3><b>Email: <%= @client.email %></h3>
-<h3><b>Address: <%= @client.address %></h3>
-<h3><b>Phone Number: <%= @client.phone %></h3>
-<h3><b>Ext: <%= @client.ext %></h3>
+<br><div class="section-title section-title--style-1 text-xs-center">
+        <h3 class="section-title-inner heading-4 strong-600">Client Information</h3>
+        <span class="section-title-delimiter clearfix"></span>
+    </div>
 
 
-<div class="content table-responsive table-full-width">
 
-<table class="table table-striped" style="margin-left: 10%; width: 80%;">
-  <thead>
-    <th>Load</th>
-    <th>Origin</th>
-    <th>Destination</th>
-    <th>Delivery Date/Time</th>
-    <th>Driver</th>
-    <th>PDF</th>
-  </thead>
-  <tbody>
-    <% @client.pods.each do |pod| %>
-      <tr>
-        <td><%= pod.load %></td>
-        <td><%= pod.pickup_address %></td>
-        <td><%= pod.dropoff_address %></td>
-        <td><%= pod.delivery_date %></td>
-        <td><%= pod.driver.name %></td>
-        <td><a href="">Download PDF</a></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="mt-2 py-2 b-xs-top">
+    <div class="row">
+        <div class="col-md-4">
+        <!-- Add margin to this div below -->
+          <div class="block block--style-3 z-depth-1-bottom" style="margin-bottom: 40px;">
+          
+            <div class="block-body text-xs-center">
+              <h3 class="heading heading-6 strong-500 text-normal">Client: <%= @client.name %></h3>
+
+              <span class="short-delimiter short-delimiter--style-1 short-delimiter-light  short-delimiter-center short-delimiter-lg"></span>
+              <p>Email: <%= @client.email %></a></p>
+              <p>Address: <%= @client.address %></p>
+              <p>Phone Number: <%= @client.phone %></p>
+              <p>Ext: <%= @client.ext %></p>
+              
+
+        
+             
+
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+
+
 </div>

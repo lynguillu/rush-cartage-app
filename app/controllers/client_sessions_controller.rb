@@ -8,7 +8,7 @@ class ClientSessionsController < ApplicationController
     if client && client.authenticate(params[:password])
       session[:client_id] = client.id
       flash[:success] = 'Successfully logged in!'
-      redirect_to '/clients'
+      redirect_to "/clients/#{client.id}" 
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/clients_login'
@@ -18,7 +18,7 @@ class ClientSessionsController < ApplicationController
   def destroy
     session[:client_id] = nil
     flash[:success] = 'Successfully logged out!'
-    redirect_to '/clients_login'
+    redirect_to "/"
   end
 
 end

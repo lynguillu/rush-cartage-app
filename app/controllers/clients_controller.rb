@@ -1,6 +1,7 @@
 class ClientsController < ApplicationController
   def index
     @clients = Client.all
+    @pods = Pod.all
     render "index.html.erb"
   end
 

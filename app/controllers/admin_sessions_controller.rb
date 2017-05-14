@@ -8,7 +8,7 @@ class AdminSessionsController < ApplicationController
     if admin && admin.authenticate(params[:password])
       session[:admin_id] = admin.id
       flash[:success] = 'Successfully logged in!'
-      redirect_to '/'
+      redirect_to '/admins'
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/admins_login'
@@ -18,6 +18,6 @@ class AdminSessionsController < ApplicationController
   def destroy
     session[:admin_id] = nil
     flash[:success] = 'Successfully logged out!'
-    redirect_to '/admins_login'
+    redirect_to "/"
   end
 end

@@ -29,6 +29,7 @@ class PodsController < ApplicationController
   def show
     pod_id = params[:id]
     @pod = Pod.find_by(id: pod_id)
+    
     render "show.html.erb"
   end
 end
