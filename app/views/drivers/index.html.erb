@@ -88,10 +88,11 @@
 <div class="content table-responsive table-full-width">
 
 
-      <table class="table table-striped" style="margin-left: 1%;
-        width: 100%;">
+      <table class="table table-striped" style="margin-left: 2%;
+        width: 130%;">
         <thead>
             <th>Load</th>
+            <th>Client</th>
             <th>Origin</th>
             <th>Destination</th>
             <th>Delivery Date/Time</th>
@@ -102,6 +103,7 @@
         <% @pods.each do | pod | %>
             <tr>
                 <td><%= pod.load%></td>
+                <td><%= pod.client.name%></td>
                 <td><%= pod.pickup_address%></td>
                 <td><%= pod.dropoff_address%></td>
                 <td><%= pod.delivery_date%></td>

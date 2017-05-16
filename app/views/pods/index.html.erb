@@ -19,17 +19,19 @@
               <span class="short-delimiter short-delimiter--style-1 short-delimiter-light  short-delimiter-center short-delimiter-lg"></span>
 
               <h3 class="heading heading-6 strong-500 text-normal">
-                <a href="#">Client: <%= pod.client.name %></a>
+                <a>Client: <%= pod.client.name %></a>
               </h3>
+              <p>ID # <%= pod.id %></p>
               <p>Load # <%= pod.load %></p>
               <p>Origin: <%= pod.pickup_address %></p>
               <p>Destination: <%= pod.dropoff_address %></p>
-              <p>Delivery Date/Time: <%= pod.delivery_date %></p>
+              <p>Delivery Date/Time: <%= pod.delivery_date.strftime("%b %e %Y, %l:%M %p") %></p>
               <p>Consignee: <%= pod.consignee %></p>
               <p>Contact Person at Delivery: <%= pod.contact_person %></p>
 
               <span class="photo-wrapper">
                   <a href="<%= pod.asset.url %>" class="theater">
+                  
                       <img src="<%= pod.asset.url %>" alt="" width=200>
                   </a>
               </span>
