@@ -8,7 +8,8 @@ class AdminSessionsController < ApplicationController
     if admin && admin.authenticate(params[:password])
       session[:admin_id] = admin.id
       flash[:success] = 'Successfully logged in!'
-      redirect_to '/admins'
+      redirect_to "/admins/#{admin.id}" 
+      
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/admins_login'

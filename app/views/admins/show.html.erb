@@ -1,7 +1,29 @@
-<h1>Admin info</h1>
-
-<h3><%= @admins.name %></h3>
-<h4><%= @admins.email %></h4>
 
 
 
+
+<br><div class="section-title section-title--style-1 text-xs-center">
+        <h3 class="section-title-inner heading-4 strong-600">Administrator Information</h3>
+        <span class="section-title-delimiter clearfix"></span>
+    </div>
+
+
+
+  <div class="mt-2 py-2 b-xs-top">
+    <div class="row">
+        <div class="col-md-4">
+        <!-- Add margin to this div below -->
+          <div class="block block--style-3 z-depth-1-bottom" style="margin-bottom: 40px;">
+          
+            <div class="block-body text-xs-center">
+              <h3 class="heading heading-6 strong-500 text-normal">Administrator: <%= @admins.name %></h3>
+
+              <span class="short-delimiter short-delimiter--style-1 short-delimiter-light  short-delimiter-center short-delimiter-lg"></span>
+              <p>Name: <%= @admins.name %></a></p>
+              <p>Email: <%= @admins.email %></p>
+             </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
