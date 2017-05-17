@@ -108,6 +108,7 @@
                 <td><%= pod.dropoff_address%></td>
                 <td><%= pod.delivery_date%></td>
                 <td><%= pod.driver.name%></td>
+                <td><a href="<%= pod.asset.url %>" class="theater"><img src="http://www.funai.gov.br/arquivos/conteudo/cggeo/img/PDF_downlaod.png" alt="" width=25<%= pod.asset_file_name%></td>
             </tr>
             <% end %>
         </tbody>
