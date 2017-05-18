@@ -55,39 +55,10 @@
 <div class="body-wrap">
     <div id="st-container" class="st-container">
 
-        <nav class="st-menu st-effect-1" id="menu-1">
-    <div class="st-profile">
-        <div class="st-profile-user-wrapper">
-            <div class="profile-user-image">
-                <img src="/images/prv/people/person-1.jpg" class="img-circle" />
-            </div>
-            <div class="profile-user-info">
-                <span class="profile-user-name">Bertram Frank Ozzie</span>
-                <span class="profile-user-email">username@example.com</span>
-            </div>
-        </div>
-    </div>
-
-
-
-    <h3 class="st-menu-title">Account</h3>
-    <div class="st-menu-list">
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="ion-ios-person-outline"></i> Client Dashboard
-                </a>
-            </li>
-         
-                <a href="#">
-                    <i class="ion-ios-unlocked-outline"></i> Password update
-                </a>
-            </li>
-        </ul>
-    </div>
+      
 
   
-</nav>
+
 
         <div class="st-pusher">
             <div class="st-content">
@@ -98,13 +69,7 @@
   <nav class="navbar navbar-main navbar--shadow navbar-dropdown--arrow navbar--caps navbar--strong" role="navigation">
     <div class="container relative">
         <div class="navbar-header">
-        <!-- NAVBAR TOGGLE -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </button>
+  
 
         <!-- LOGO -->
         <a class="navbar-logo" href="index.html">
@@ -116,9 +81,7 @@
             </a>
 
                   <!-- SLIDEBAR TOGGLE -->
-          <button type="button" class="navbar-icon-btn btn-st-trigger" data-effect="st-effect-1">
-          <i class="fa fa-bars"></i>
-          </button>
+       
         
         <!-- NAVBAR SEARCH - for mobile resolutions -->
             <button type="button" class="navbar-icon-btn css-animate" data-target="#sctGlobalSearch">
@@ -138,7 +101,7 @@
           </li>
 
           <!-- Navbar items/links -->
-                     <!-- Navbar links -->
+                 
 <li>
     <a href="/">
        <span>Home</span>
@@ -165,55 +128,35 @@
     </a>
 </li>
 
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       <span>Log in</span>
+    </a>
+    <ul class="dropdown-menu">
+        
+           
+        </li>
+        <li>
 
-                    <li class="dropdown-icon hidden-xs hidden-sm">
-            <a href="#" class="btn-st-trigger ttip" data-effect="st-effect-1">
-              <span><i class="fa fa-bars"></i></span>
-            </a>
-          </li>
+            <a tabindex="-1" href="/admins_login">Admin Login</a>
+        </li>
+        <li>
+            <a tabindex="-1" href="/clients_login">Client Login</a>
+        </li>
+         <li>
+            <a tabindex="-1" href="drivers_login">Driver Login</a>
+        </li>
+    </ul>
+</li>
+
+<li>
+    <a href="/clients_signup"
+       <span>Sign up</span>
+    </a>
+</li>
           
-                    <!-- Login button -->
-                    <li class="dropdown-icon dropdown-icon--style-2 hidden-xs hidden-sm">
-                      <a href="#" data-toggle="dropdown">
-                        <span>
-                          <i class="fa fa-user"></i>
-                        </span>
-                      </a>
-                      <ul class="dropdown-menu dropdown-form">
-    <li>
-        <div class="dropdown-form-inner">
-            <h3 class="heading heading-6 text-uppercase strong-500">Sign in</h3>
-            <!-- <form class="form-default mt-2" role="form"> -->
-            <%= form_tag "/clients_login", method: :post do %>
-                <div class="form-group form-group-lg has-icon">
-                    <label class="control-label sr-only" for="inputEmail">Email</label>
-                    <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Email">
-                    <span class="fa fa-user form-control-icon" aria-hidden="true"></span>
-                </div>
-                <div class="form-group form-group-lg has-icon">
-                    <label class="control-label sr-only" for="inputEmail">Password</label>
-                    <input type="password" name="password" class="form-control" id="inputEmail" placeholder="Password">
-                    <span class="fa fa-lock form-control-icon" aria-hidden="true"></span>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" id="chkRememberMe">
-                    <label for="chkRememberMe">Remember me</label>
-                </div>
-                <div class="mt-2">
-                    <button type="submit" class="btn btn-block btn-base-1">Sign in</button>
-                </div>
-            <% end %>
-            <!-- </form> -->
-        </div>
-    </li>
-
-    <li class="text-center b-xs-top">
-        <a href="sign-up-1.html">
-            Create a new account
-        </a>
-    </li>
-</ul>
-          </li>
+                 
+ 
             </ul>
         </div>
     </div>

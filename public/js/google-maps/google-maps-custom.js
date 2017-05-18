@@ -212,11 +212,7 @@ jQuery(document).ready(function($) {
     content: 'We are Here!'
   };
 
-var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-google.maps.event.addListener(marker,'click',function(e){
-  
-  infoWindow.open(map, marker);
-});
+
 
   //add custom buttons for the zoom-in/zoom-out on the map
   function CustomZoomControl(controlDiv, map) {

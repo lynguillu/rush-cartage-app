@@ -18,7 +18,7 @@ class ClientSessionsController < ApplicationController
   def destroy
     session[:client_id] = nil
     flash[:success] = 'Successfully logged out!'
-    redirect_to "/"
+    redirect_to '/clients_login'
   end
 
 end
