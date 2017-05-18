@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_client
-    @current_client ||= User.find_by(id: session[:client_id]) if session[:client_id]
+    @current_client ||= Client.find_by(id: session[:client_id]) if session[:client_id]
   end
   helper_method :current_client
 

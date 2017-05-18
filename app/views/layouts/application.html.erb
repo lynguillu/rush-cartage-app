@@ -51,14 +51,17 @@
   </head>
 
   <body>
+
+
+<% flash.each do |name, message| %>
+  <div class="alert alert-<%= name %> alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p><%= message %></p>
+  </div>
+<% end %>
+
 <!-- MAIN WRAPPER -->
 <div class="body-wrap">
     <div id="st-container" class="st-container">
-
-      
-
-  
-
 
         <div class="st-pusher">
             <div class="st-content">
@@ -110,17 +113,15 @@
      
 
 <li>
-    <a href="/">
+    <a href="/about_us">
        <span>About</span>
     </a>
 </li>
  
 <li>
-    <a href="/">
+    <a href="/services">
        <span>Services</span>
     </a>
-
-
 
 <li>
     <a href="/contacts">
@@ -128,6 +129,22 @@
     </a>
 </li>
 
+<% if current_driver %>
+<li>
+    <a href="/drivers_logout">Logout</a>
+</li>
+<% elsif current_admin %>
+<li>
+    <a href="/admins">Dashboard</a>
+</li>
+<li>
+    <a href="/admins_logout">Logout</a>
+</li>
+<% elsif current_client %>
+<li>
+    <a href="/clients_logout">Logout</a>
+</li>
+<% else %>
 <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
        <span>Log in</span>
@@ -154,6 +171,7 @@
        <span>Sign up</span>
     </a>
 </li>
+<% end %>
           
                  
  
@@ -186,6 +204,8 @@
     </div>
 </section>
 </div>
+
+
     <%= yield %>
 
                     <!-- FOOTER -->

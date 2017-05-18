@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
   def index
     @admins = Admin.all
-    @pods = Pod.all
+      @pods = current_admins.pods
     render "index.html.erb"
   end
 

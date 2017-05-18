@@ -40,4 +40,8 @@ Rails.application.routes.draw do
   
   get "/contacts" => "contacts#index"
 
+  get "/about_us" => "about_us#index"
+
+  get "/services" => "services#index"
+
 end
