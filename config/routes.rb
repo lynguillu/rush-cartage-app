@@ -38,10 +38,10 @@ Rails.application.routes.draw do
   post "/clients_login" => "client_sessions#create"
   get "/clients_logout" => "client_sessions#destroy"
   
-  get "/contacts" => "contacts#index"
-
   get "/about_us" => "about_us#index"
 
   get "/services" => "services#index"
+
+  get "/contacts" => "contacts#index"
 
 end
