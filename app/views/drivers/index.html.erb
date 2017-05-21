@@ -1,50 +1,44 @@
-
-
 <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-               
-                <a class="navbar-brand" href="#">Dashboard</a>
-            </div>
-            <div class="collapse navbar-collapse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+           
         
-                <form class="navbar-form navbar-left navbar-search-form" role="search">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="text" value="" class="form-control" placeholder="Search...">
-                    </div>
-                </form>
-
-            </div>
         </div>
-    </nav>
-<body>
-<br><div class="section-title section-title--style-1 text-xs-center">
-        <h2 class="section-title-inner heading-4 strong-600">Driver Dashboard</h2>
-        <span class="section-title-delimiter clearfix"></span>
+        <div class="collapse navbar-collapse">
+            <form class="navbar-form navbar-left navbar-search-form" role="search">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" value="" class="form-control" placeholder="Search..." />
+                </div>
+            </form>
+        </div>
     </div>
+</nav>
+<br>
+<div class="section-title section-title--style-1 text-xs-center">
+    <h2 class="section-title-inner heading-4 strong-600">Driver Dashboard</h2>
+    <span class="section-title-delimiter clearfix"></span>
+</div>
 
 <!-- MAIN WRAPPER -->
 
 
-</nav>
-
-        <div class="st-pusher">
-            <div class="st-content">
-                <div class="st-content-inner">
-                    <!-- HEADER -->
-                    <div class="header-1 header-inner-wrapper" id="header">
-    <!-- GLOBAL SEARCH -->
-    <section id="sctGlobalSearch" class="global-search global-search--style-2">
-    <div class="relative">
-        <!-- Backdrop for global search -->
-        <div class="global-search-backdrop"></div>
+<div class="st-pusher">
+    <div class="st-content">
+        <div class="st-content-inner">
+            <!-- HEADER -->
+            <div class="header-1 header-inner-wrapper" id="header">
+            <!-- GLOBAL SEARCH -->
+            <section id="sctGlobalSearch" class="global-search global-search--style-2">
+                <div class="relative">
+                    <!-- Backdrop for global search -->
+                    <div class="global-search-backdrop"></div>
 
 
                     
                     <!-- Search button -->
- <li id="btnGlobalSearch" class="css-animate dropdown-icon hidden-xs hidden-sm" data-target="#sctGlobalSearch">
-<a href="#" data-toggle="dropdown">
+                     <li id="btnGlobalSearch" class="css-animate dropdown-icon hidden-xs hidden-sm" data-target="#sctGlobalSearch">
+                    <a href="#" data-toggle="dropdown">
   <span>
     <i class="fa fa-search"></i>
                             </span>
@@ -53,7 +47,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+
 
 
 </div>
@@ -110,7 +104,7 @@
                 <td><%= pod.driver.name%></td>
                 <td><a href="<%= pod.asset.url %>" class="theater"><img src="http://www.funai.gov.br/arquivos/conteudo/cggeo/img/PDF_downlaod.png" alt="" width=25<%= pod.asset_file_name%></td>
             </tr>
-            <% end %>
+        <% end %>
         </tbody>
       </table>
     </div>
@@ -124,14 +118,15 @@
     <!-- About me -->
     <div class="sidebar-object">
         <div class="block-card-wrapper">
-            <div class="block-card-section z-depth-1-bottom">
+            <div class="block-card-section z-depth-1-bottom new-pod-form">
                 <div class="block-card-section-inner">
 
     </div>
       
 <!-- Upload POD -->
+ 
 
- <br><div class="section-title section-title--style-1 text-xs-center">
+  <div class="section-title section-title--style-1 text-xs-center">
         <h4 class="section-title-inner heading-4 strong-600">Upload POD</h4>
         <span class="section-title-delimiter clearfix"></span>
     </div>
@@ -181,7 +176,7 @@
     </div>
 
     <p>NOTES:</p>
-    <textarea rows="4" cols="50">
+    <textarea rows="2" cols="29">
     </textarea>
     <br><br>
 
@@ -203,21 +198,7 @@
 </div>
 </div>
 </div>
-
-  
- </div>
+</div>
 </div>
 </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-

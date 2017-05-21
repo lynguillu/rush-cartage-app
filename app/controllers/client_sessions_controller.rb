@@ -8,7 +8,7 @@ class ClientSessionsController < ApplicationController
     if client && client.authenticate(params[:password])
       session[:client_id] = client.id
       flash[:success] = 'Successfully logged in!'
-      redirect_to "/clients/#{client.id}" 
+      redirect_to "/clients" 
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/clients_login'

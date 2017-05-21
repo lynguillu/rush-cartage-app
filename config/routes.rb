@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get "/clients_signup" => "clients#new"
   post "/clients" => "clients#create"
 
+
   get "/drivers_signup" => "drivers#new"
   post "/drivers" => "drivers#create"
 

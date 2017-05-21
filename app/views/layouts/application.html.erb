@@ -103,14 +103,16 @@
                       </a>
           </li>
 
+
           <!-- Navbar items/links -->
+
                  
 <li>
     <a href="/">
        <span>Home</span>
     </a>
 </li>
-     
+
 
 <li>
     <a href="/about_us">
@@ -131,6 +133,9 @@
 
 <% if current_driver %>
 <li>
+    <a href="/drivers">Dashboard</a>
+</li>
+<li>
     <a href="/drivers_logout">Logout</a>
 </li>
 <% elsif current_admin %>
@@ -141,6 +146,9 @@
     <a href="/admins_logout">Logout</a>
 </li>
 <% elsif current_client %>
+<li>
+    <a href="/clients">Dashboard</a>
+</li>
 <li>
     <a href="/clients_logout">Logout</a>
 </li>
