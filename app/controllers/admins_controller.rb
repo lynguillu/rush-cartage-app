@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
   def index
     @admins = Admin.all
-      @pods = current_admins.pods
+    @pods = current_admins.pods
     render "index.html.erb"
   end
 
@@ -19,7 +19,7 @@ class AdminsController < ApplicationController
     if admin.save
       session[:admin_id] = admin.id
       flash[:success] = 'Successfully created admin!'
-      redirect_to '/'
+      redirect_to '/admins'
     else
       flash[:warning] = 'Invalid email or password!'
       redirect_to '/admins_signup'

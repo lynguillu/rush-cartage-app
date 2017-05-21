@@ -97,7 +97,7 @@
             <th>Destination</th>
             <th>Delivery Date/Time</th>
             <th>Driver</th>
-            <th>Download POD</th>
+            <th>View POD</th>
         </thead>
         <tbody>
         <% @pods.each do | pod | %>
@@ -138,60 +138,59 @@
 
  <%= form_tag "/pods", method: :post, multipart: true do %>
 
-<div class="form-group">
-  Driver Name: 
-  <select name="driver_id" class="form-control">
-    <% Driver.all.each do |driver| %>
-      <option value="<%= driver.id %>"><%= driver.name %></option>
-    <% end %>
-  </select>
-</div>
+    <div class="form-group">
+      Driver Name: 
+      <select name="driver_id" class="form-control">
+        <% Driver.all.each do |driver| %>
+          <option value="<%= driver.id %>"><%= driver.name %></option>
+        <% end %>
+      </select>
+    </div>
 
-<div class="form-group">
-  Client Name: 
-  <select name="client_id" class="form-control">
-   <% Client.all.each do |client| %>
-   <option value="<%= client.id %>"><%= client.name %></option>
-    <% end %>
-  </select>
-</div>
+    <div class="form-group">
+      Client Name: 
+      <select name="client_id" class="form-control">
+       <% Client.all.each do |client| %>
+       <option value="<%= client.id %>"><%= client.name %></option>
+        <% end %>
+      </select>
+    </div>
 
-<div class="form-group">
- Load #: <input type="text" class="form-control" name="load">
-</div>
+    <div class="form-group">
+     Load #: <input type="text" class="form-control" name="load">
+    </div>
 
-<div class="form-group">
- Origin: <input type="text" class="form-control" name="pickup_address">
-</div>
+    <div class="form-group">
+     Origin: <input type="text" class="form-control" name="pickup_address">
+    </div>
 
+    <div class="form-group">
+     Destination: <input type="text" class="form-control" name="dropoff_address">
+    </div>
 
-<div class="form-group">
- Destination: <input type="text" class="form-control" name="dropoff_address">
-</div>
+    <div class="form-group">
+      Delivery Date/Time: <input type="datetime-local" class="form-control" name="delivery_date">
+    </div>
 
-<div class="form-group">
-  Delivery Date/Time: <input type="datetime-local" class="form-control" name="delivery_date">
-</div>
+    <div class="form-group">
+      Consignee: <input type="text" class="form-control" name="consignee">
+    </div>
 
-<div class="form-group">
-  Consignee: <input type="text" class="form-control" name="consignee">
-</div>
+    <div class="form-group">
+      Contact Person at Delivery: <input type="text" class="form-control" name="contact_person">
+    </div>
 
-<div class="form-group">
-  Contact Person at Delivery: <input type="text" class="form-control" name="contact_person">
-</div>
+    <p>NOTES:</p>
+    <textarea rows="4" cols="50">
+    </textarea>
+    <br><br>
 
-<p>NOTES:</p>
-<textarea rows="4" cols="50">
-</textarea>
-<br><br>
+    <div class="form-group">
+      Asset: <input type="file" class="form-control" name="asset">
+    </div>
 
-<div class="form-group">
-  Asset: <input type="file" class="form-control" name="asset">
-</div>
-
-<input type="submit" class="btn btn-default" value="create POD">
-<br><input type="file">
+    <input type="submit" class="btn btn-default" value="create POD">
+    <br>
 <% end %>
 
 
@@ -210,6 +209,12 @@
 </div>
 </div>
 </section>
+
+
+
+
+
+
 
 
 

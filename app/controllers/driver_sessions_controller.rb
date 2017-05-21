@@ -1,4 +1,6 @@
 class DriverSessionsController < ApplicationController
+  
+
   def new
     render 'new.html.erb'
   end

@@ -1,6 +1,6 @@
 class Pod < ApplicationRecord
-  belongs_to :client
-  belongs_to :driver
+  belongs_to :client, optional: true
+  belongs_to :driver, optional: true
   has_attached_file :asset, styles: { 
     medium: "1024x768", 
     small: "500x334", 
