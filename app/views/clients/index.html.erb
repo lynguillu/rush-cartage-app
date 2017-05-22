@@ -1,15 +1,16 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-       
+        <div class="navbar-header">
+           
+        
+        </div>
         <div class="collapse navbar-collapse">
-    
             <form class="navbar-form navbar-left navbar-search-form" role="search">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                    <input type="text" value="" class="form-control" placeholder="Search...">
+                    <input type="text" value="" class="form-control" placeholder="Search..." />
                 </div>
             </form>
-
         </div>
     </div>
 </nav>
@@ -21,69 +22,191 @@
 
 
 
-<section class="slice sct-color-2">
+
+<!-- MAIN WRAPPER -->
+
+
+<div class="st-pusher">
+    <div class="st-content">
+        <div class="st-content-inner">
+            <!-- HEADER -->
+            <div class="header-1 header-inner-wrapper" id="header">
+            <!-- GLOBAL SEARCH -->
+            <section id="sctGlobalSearch" class="global-search global-search--style-2">
+                <div class="relative">
+                    <!-- Backdrop for global search -->
+                    <div class="global-search-backdrop"></div>
+
+
+                    
+                    <!-- Search button -->
+                     <li id="btnGlobalSearch" class="css-animate dropdown-icon hidden-xs hidden-sm" data-target="#sctGlobalSearch">
+                    <a href="#" data-toggle="dropdown">
+  <span>
+    <i class="fa fa-search"></i>
+                            </span>
+                        </a>
+                            </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+</div>
+ <section class="slice sct-color-2">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="block-card-wrapper">
-                    <div class="block-card-section z-depth-1-bottom">
-                        <div class="block-card-section-inner">
-                            <div class="text-xs-center">
-                            </div>                                  
-                        </div>
-
-                        <span class="clearfix"></span>
-
-                        <div class="block block-post">
-                            <div class="block-image mt-1">
+                            <div class="row">
+                                <div class="col-md-8 col-md-push-4">
+                                 <div class="block-card-wrapper">
+                                 <div class="block-card-section z-depth-1-bottom">
+                                <div class="block-card-section-inner">
+                                <div class="text-xs-center">
                             </div>
-                        </div>
-                        <br>
-                        <div class="section-title section-title--style-1 text-xs-center">
-                            <h3 class="section-title-inner heading-4 strong-600">Shipment Document Request</h3>
-                            <span class="section-title-delimiter clearfix"></span>
-                        </div>
+                                            
+     </div>
 
-                        <div class="section-title section-title--style-1 text-xs-center">
+    <span class="clearfix"></span>
+
+    <div class="block block-post">
+    <div class="block-image mt-1">
+    
+    </div>
+       <br><div class="section-title section-title--style-1 text-xs-center">
+        <h4 class="section-title-inner heading-4 strong-600">Proof of Delivery Board</h4>
+        <span class="section-title-delimiter clearfix"></span>
+    </div>
+
+      <div class="section-title section-title--style-1 text-xs-center">
                             <h6>Quickly request a Bill of Lading.<br>All you need is a load number and destination ZIP for convenient document delivery right at your fingertips.</h6>
                         </div>
 
-                        <!-- POD table -->
 
-                        <div class="content table-responsive table-full-width">
-                          <table class="table table-striped" style="margin-left: 2%;
-                            width: 130%;">
-                            <thead>
-                                <th>Load</th>
-                                <th>Client</th>
-                                <th>Origin</th>
-                                <th>Destination</th>
-                                <th>Delivery Date/Time</th>
-                                <th>Driver</th>
-                                <th>View POD</th>
-                            </thead>
-                            <tbody>
-                            <% @pods.each do | pod | %>
-                                <tr>
-                                    <td><%= pod.load%></td>
-                                    <td><%= pod.client.name%></td>
-                                    <td><%= pod.pickup_address%></td>
-                                    <td><%= pod.dropoff_address%></td>
-                                    <td><%= pod.delivery_date%></td>
-                                    <td><%= pod.driver.name%></td>
-                                    <td><a href="<%= pod.asset.url %>" class="theater"><img src="http://www.funai.gov.br/arquivos/conteudo/cggeo/img/PDF_downlaod.png" alt="" width=25<%= pod.asset_file_name%>/></a></td>
-                                </tr>
-                                <% end %>
-                            </tbody>
-                          </table>
-                        </div>
+<!-- POD table -->
+
+<div class="content table-responsive table-full-width">
+
+
+      <table class="table table-striped" style="margin-left: 2%;
+        width: 130%;">
+        <thead>
+            <th>Load</th>
+            <th>Client</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Delivery Date/Time</th>
+            <th>Driver</th>
+            <th>View POD</th>
+        </thead>
+        <tbody>
+        <% @pods.each do | pod | %>
+            <tr>
+                <td><%= pod.load%></td>
+                <td><%= pod.client.name%></td>
+                <td><%= pod.pickup_address%></td>
+                <td><%= pod.dropoff_address%></td>
+                <td><%= pod.delivery_date%></td>
+                <td><%= pod.driver.name%></td>
+                <td><a href="<%= pod.asset.url %>" class="theater"><img src="http://www.funai.gov.br/arquivos/conteudo/cggeo/img/PDF_downlaod.png" alt="" width=25<%= pod.asset_file_name%></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+ </div>
+ 
+</div>
+</div>
+</div>
+<div class="col-md-4 col-md-pull-8">
+         <div class="sidebar">
+    <!-- Side Bar -->
+    <div class="sidebar-object">
+        <div class="block-card-wrapper">
+         <div class="block-card-section z-depth-1-bottom new-pod-form">
+                <div class="block-card-section-inner">
+
+    </div>
+      
+<!-- Stay connected -->
+    <div class="sidebar-object">
+        <div class="block-card-wrapper">
+            <div class="block-card-section z-depth-1-bottom new-pod-form">
+                <div class="block-card-section-inner">
+                    <div class="card-section-title">
+                        <h3 class="heading heading-6 strong-700 text-uppercase">
+                            Stay connected
+                        </h3>
+                    </div>
+
+                    <div class="py-1 text-xs-center">
+                        <ul class="social-media social-media--style-1-v3 social-media-circle">
+                            <li>
+                                <a href="#" class="facebook" target="_blank" title="Facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="instagram" target="_blank">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                    
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+        <!-- Stay connected -->
+    <div class="sidebar-object">
+        <div class="block-card-wrapper">
+            <div class="block-card-section z-depth-1-bottom">
+                <div class="block-card-section-inner z-depth-1-bottom new-pod-form">
+                    <div class="card-section-title">
+                        <h3 class="heading heading-6 strong-700 text-uppercase">
+                            Subscribe to my newsletter
+                        </h3>
+                    </div>
+
+                    <div class="text-xs-center">
+                        <p class="mb-2">
+                            If you want to hear from us you can subscribe to our newsletter.
+                        </p>
+
+                        <form class="form-default" data-toggle="validator" role="form">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group has-feedback">
+                                        <label class="control-label sr-only">Email</label>
+                                        <input type="email" class="form-control input-lg" placeholder="Email" required>
+                                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-sm btn-base-4">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-<!-- SCRIPTS -->
-<a href="#0" class="back-to-top"></a>
-
