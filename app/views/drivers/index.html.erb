@@ -131,7 +131,7 @@
         <span class="section-title-delimiter clearfix"></span>
     </div>
 
- <%= form_tag "/pods", method: :post, multipart: true do %>
+ <%= form_tag "/pods", method: :post, multipart: true, class: "form-pod" do %>
 
     <div class="form-group">
       Driver Name: 
@@ -175,7 +175,7 @@
       Contact Person at Delivery: <input type="text" class="form-control" name="contact_person">
     </div>
 
-    <p>NOTES:</p>
+    <p>Quick Note:</p>
     <textarea rows="2" cols="29">
     </textarea>
     <br><br>
@@ -184,7 +184,8 @@
       Asset: <input type="file" class="form-control" name="asset">
     </div>
 
-    <input type="submit" class="btn btn-default" value="create POD">
+    <!-- <input type="submit" class="btn btn-default" value="create POD"> -->
+    <a class="btn btn-default button-pod-create" href="#">Create POD</a>
     <br>
 <% end %>
 

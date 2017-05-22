@@ -25,7 +25,7 @@
               <p>Load # <%= pod.load %></p>
               <p>Origin: <%= pod.pickup_address %></p>
               <p>Destination: <%= pod.dropoff_address %></p>
-              <p>Delivery Date/Time: <%= pod.delivery_date.strftime("%b %e %Y, %l:%M %p") %></p>
+              <p>Delivery Date/Time: <%= pod.delivery_date.try(:strftime, '%B %d, %Y') %></p>
               <p>Consignee: <%= pod.consignee %></p>
               <p>Contact Person at Delivery: <%= pod.contact_person %></p>
 
