@@ -1,11 +1,14 @@
 class Pod < ApplicationRecord
   belongs_to :client, optional: true
   belongs_to :driver, optional: true
-  has_attached_file :asset, styles: { 
-    medium: "1024x768", 
-    small: "500x334", 
-    thumb: "100x67" 
-  }
+  has_attached_file :asset,
+    source_file_options: {all: '-auto-orient'},
+    styles: { 
+      original: "",
+      medium: "1024x768", 
+      small: "500x334", 
+      thumb: "100x67" 
+    }
   validates_attachment_content_type :asset, content_type: /\Aimage\/.*\z/
   before_save :convert_images
 
