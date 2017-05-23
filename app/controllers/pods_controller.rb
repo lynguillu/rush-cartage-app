@@ -23,7 +23,7 @@ class PodsController < ApplicationController
      asset: params[:asset]
     )
     pod.save
-    redirect_to "/pods"
+    redirect_to "/drivers"
   end
  
 

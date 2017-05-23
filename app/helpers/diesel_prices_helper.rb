@@ -1,0 +1,2 @@
+module DieselPricesHelper
+end

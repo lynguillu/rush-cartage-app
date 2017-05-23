@@ -44,7 +44,8 @@ Rails.application.routes.draw do
   get "/services" => "services#index"
 
   get "/contacts" => "contacts#index"
-
+ 
+  get "/diesel_prices" => "diesel_prices#index"
 
 
 end
