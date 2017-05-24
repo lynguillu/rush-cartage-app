@@ -122,51 +122,53 @@
                 <div class="block-card-section-inner">
 
     </div>
-      
-<!-- Stay connected -->
+  
+<!-- Gas Prices  -->
     <div class="sidebar-object">
         <div class="block-card-wrapper">
             <div class="block-card-section z-depth-1-bottom new-pod-form">
                 <div class="block-card-section-inner">
                     <div class="card-section-title">
                         <h3 class="heading heading-6 strong-700 text-uppercase text-xs-center">
-                            Weekly Retail Gasoline and Diesel Prices 
+                            Midwest No 2 Diesel Retail Prices, Weekly 
                         </h3>
-                    </div>
-<div class="py-1 text-xs-center">
-                        <ul class="social-media social-media--style-1-v3 social-media-circle">
-                            <li>
-                                <a href="#" class="facebook" target="_blank" title="Facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="instagram" target="_blank">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </li>
-                    
-                        </ul>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
 
-        <!-- Weather-->
-    <div class="sidebar-object">
-        <div class="block-card-wrapper">
-            <div class="block-card-section z-depth-1-bottom">
-                <div class="block-card-section-inner">
-                    <div class="card-section-title text-xs-center">
-                        <h3 class="heading heading-6 strong-700 text-uppercase">
-                           Weather
-                        </h3>
                     </div>
+
 
                     <div class="text-xs-center">
+        <div class="content table-responsive table-full-width">
+                <table class="table table-striped" style="margin-left: 2%;
+                        width: 150%;">
+
+                     
+                        <thead>
+                            <th>Weeks</th>
+                            <th>Avg Price</th>
+                        </thead>
+                    <tbody>
+
+                     <% @series_data.take(6).each do |data| %>  
+
+                        <% date = "#{data[0][4..5]}/#{data[0][6..7]}/#{data[0][0..3]}" %>
+                        <tr>
+                            <td><%= Date.strptime(date, "%m/%d").strftime("%b %d, %Y") %></td>
+                            <td><%= data[1] %></td>
+                        </tr>
+
+                        <% end %>
+                        
                        
+                
+                    </tbody>
+                    <%= @units %>
+                </table>
+    </div>
+          
+
+
+
+    
 
                     </div>
 
