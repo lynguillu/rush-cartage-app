@@ -28,4 +28,11 @@ class ApplicationController < ActionController::Base
     redirect_to '/drivers_login' unless current_client
   end
 
+  def authenticate_admin_or_driver_or_client!
+    redirect_to '/' unless current_admin || current_driver || current_client
+  end
+
+  def authenticate_admin_or_driver!
+    redirect_to '/' unless current_admin || current_driver
+  end
 end

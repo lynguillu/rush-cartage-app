@@ -1,4 +1,7 @@
 class PodsController < ApplicationController
+  before_action :authenticate_admin_or_driver_or_client!
+  before_action :authenticate_admin_or_driver!, only: [:index]
+
   def index
     @pods = Pod.all
     render "index.html.erb"
