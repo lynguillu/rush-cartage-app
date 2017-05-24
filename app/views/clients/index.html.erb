@@ -16,8 +16,12 @@
 </nav>
 <br>
 <div class="section-title section-title--style-1 text-xs-center">
-    <h2 class="section-title-inner heading-4 strong-600">Client Dashboard</h2>
+    <h2 class="section-title-inner heading-4 strong-600"> <%= current_client.name %>'s Dashboard</h2>
     <span class="section-title-delimiter clearfix"></span>
+
+<% if current_driver %>
+        <p>Welcome <%= current_client.name %></p>
+    <% end %>
 </div>
 
 
@@ -53,6 +57,7 @@
 
 
 
+
 </div>
  <section class="slice sct-color-2">
     <div class="container">
@@ -76,6 +81,7 @@
         <h4 class="section-title-inner heading-4 strong-600">Proof of Delivery Board</h4>
         <span class="section-title-delimiter clearfix"></span>
     </div>
+
 
       <div class="section-title section-title--style-1 text-xs-center">
                             <h6>Quickly request a Bill of Lading.<br>All you need is a load number and destination ZIP for convenient document delivery right at your fingertips.</h6>
@@ -166,7 +172,7 @@
                 <div class="block-card-section-inner z-depth-1-bottom new-pod-form">
                     <div class="card-section-title">
                         <h3 class="heading heading-6 strong-700 text-uppercase">
-                            Subscribe to my newsletter
+                            Subscribe to our newsletter
                         </h3>
                     </div>
 

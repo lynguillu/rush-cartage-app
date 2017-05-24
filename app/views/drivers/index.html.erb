@@ -16,7 +16,11 @@
 </nav>
 <br>
 <div class="section-title section-title--style-1 text-xs-center">
-    <h2 class="section-title-inner heading-4 strong-600">Driver Dashboard</h2>
+    <% if current_driver %>
+        <p>Welcome <%= current_driver.name %>! </p>
+    <% end %>
+    <br>
+    <h2 class="section-title-inner heading-4 strong-600"><%= current_driver.name %>'s Dashboard</h2>
     <span class="section-title-delimiter clearfix"></span>
 </div>
 

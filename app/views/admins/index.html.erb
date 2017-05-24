@@ -14,9 +14,13 @@
         </div>
     </div>
 </nav>
-<br>
+<br><br>
+<% if current_driver %>
+        <p>Welcome <%= current_admin.name %></p>
+    <% end %>
+
 <div class="section-title section-title--style-1 text-xs-center">
-    <h2 class="section-title-inner heading-4 strong-600">Admin Dashboard</h2>
+    <h2 class="section-title-inner heading-4 strong-600"><%= current_admin.name %>'s Dashboard</h2>
     <span class="section-title-delimiter clearfix"></span>
 </div>
 
@@ -140,7 +144,7 @@
                     <div class="text-xs-center">
         <div class="content table-responsive table-full-width">
                 
-                <table class="table table-striped" style="margin-left: 0%;
+                <table class="table table-striped" style="margin-right: 0%;
                         width: 130%;">
 
                      
