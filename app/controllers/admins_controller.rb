@@ -1,6 +1,6 @@
 class AdminsController < ApplicationController
   def index
-    @pods = Pod.all
+    @pods = Pod.order(delivery_date: :desc).paginate(:page => params[:page], :per_page => 10)
     @admins = Admin.all
       @data = Unirest.get("http://api.eia.gov/series/?api_key=bea6202b7a787c0b4d1daf15108ae4f7&series_id=PET.EMD_EPD2D_PTE_R20_DPG.W").body
     @series_data = @data["series"][0]["data"]

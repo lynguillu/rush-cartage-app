@@ -1,7 +1,7 @@
 class DriversController < ApplicationController
   def index
     @drivers = Driver.all
-    @pods = current_driver.pods
+    @pods = current_driver.pods.order(delivery_date: :desc).paginate(:page => params[:page], :per_page => 10)
     render "index.html.erb"
   end
   

@@ -108,6 +108,7 @@
         </tbody>
       </table>
     </div>
+    <%= will_paginate @pods %>
  </div>
  
 </div>
@@ -138,13 +139,14 @@
 
                     <div class="text-xs-center">
         <div class="content table-responsive table-full-width">
+                
                 <table class="table table-striped" style="margin-left: 2%;
                         width: 150%;">
 
                      
                         <thead>
-                            <th>Weeks</th>
-                            <th>Avg Price</th>
+                            <th>Period</th>
+                            <th>Value</th>
                         </thead>
                     <tbody>
 
@@ -161,10 +163,11 @@
                        
                 
                     </tbody>
-                    <%= @units %>
+                    <h6><%= @units %></h6>
+                    <h6>Updated <%= @updated %></h6>
                 </table>
     </div>
-          
+        
 
 
 
