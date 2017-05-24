@@ -1,7 +1,7 @@
 class ClientsController < ApplicationController
   def index
     @clients = Client.all
-    @pods = current_client.pods
+    @pods = current_client.pods.order(delivery_date: :desc).paginate(:page => params[:page], :per_page => 10)
     render "index.html.erb"
   end
 
