@@ -140,11 +140,8 @@
 
     <div class="form-group">
       Driver Name: 
-      <select name="driver_id" class="form-control">
-        <% Driver.all.each do |driver| %>
-          <option value="<%= driver.id %>"><%= driver.name %></option>
-        <% end %>
-      </select>
+         <%= collection_select(:driver, :driver_id, Driver.all, :id, :name, {selected: current_driver.id}, class: "form-control") %>
+
     </div>
 
     <div class="form-group">
